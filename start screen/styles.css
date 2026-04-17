@@ -4,6 +4,16 @@
     --pri: white;
 }
 
+@keyframes shadow-pulse {
+    0% {
+      box-shadow: 0 4px 20px #FFF755;
+    }
+    100% {
+      /* Increase the blur and spread radius to "grow" the shadow */
+      box-shadow: 0 4px 40px 10px #FFF755;
+    }
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -34,7 +44,7 @@ button{
     border-radius: 15px;
     align-self: center;
     background: linear-gradient(90deg, rgba(199, 175, 82, 0.92) 0%, rgba(74, 42, 14, 0.92) 100%); /*got the the box properties from figma hifi so i diddnt have to finnick with the settings and stuff and save time*/
-    box-shadow: 0 4px 62.1px 0 #FFF755, 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 20px 0 #FFF755, 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     color: var(--pri);
     border: var(--pri), 3px, solid;
 
@@ -45,4 +55,10 @@ h1{
     text-shadow: 4px -3px 4px #533900, -4px 3px 2.5px #B3B600; /*also got this from figma*/
     font-size: clamp(45px, 7vw, 100px);
     text-align: center;
+}
+
+#play:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 80px 0 #FFF755, 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    animation: shadow-pulse 0.75s infinite alternate ease-in-out;
 }
