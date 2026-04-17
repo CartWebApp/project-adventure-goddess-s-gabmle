@@ -33,11 +33,16 @@ button{
     font-size: clamp(20px, 1.8rem + 1.5vw, 10rem + 1vw);
     border-radius: 15px;
     align-self: center;
-    
+    background: linear-gradient(90deg, rgba(199, 175, 82, 0.92) 0%, rgba(74, 42, 14, 0.92) 100%); /*got the the box properties from figma hifi so i diddnt have to finnick with the settings and stuff and save time*/
+    box-shadow: 0 4px 62.1px 0 #FFF755, 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: var(--pri);
+    border: var(--pri), 3px, solid;
+
 }
 
 h1{
     color: var(--pri);
+    text-shadow: 4px -3px 4px #533900, -4px 3px 2.5px #B3B600; /*also got this from figma*/
     font-size: clamp(45px, 7vw, 100px);
     text-align: center;
 }
