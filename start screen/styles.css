@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Sekuya&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap'); /*gets the font from google so i can use it here*/
+:root{
+    --main-font: "Italianno", cursive; /*this is the font i'm using for this page */
+    --pri: white;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url("../imgs/titlescreen.png");/* i'm setting the bg image here and the settings for it*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+@media (orientation: portrait){ /* if height is larger than width media query is very very useful*/
+    body{
+        background-image: url("../imgs/vertTitlescreen.png"); /*transforms to vertical variation*/
+        justify-content: center;
+    }
+}
+
+body, button{
+    font-family: var(--main-font); /*giving everything the font I want*/
+}
+
+button{
+    width: clamp(225px, 25%, 40%); /*clamp is cool its really convenient compared to media queries, the min width is 100px, 
+                                    the preferred width is 25%, and the max is 50%*/
+    height: clamp(75px, 7vw, 10vw);
+    font-size: clamp(20px, 1.8rem + 1.5vw, 10rem + 1vw);
+    border-radius: 15px;
+    align-self: center;
+    
+}
+
+h1{
+    color: var(--pri);
+    font-size: clamp(45px, 7vw, 100px);
+    text-align: center;
+}
