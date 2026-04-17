@@ -27,16 +27,35 @@ body{
 
 @media (orientation: portrait){ /* if height is larger than width media query is very very useful*/
     body{
+        display: grid;
         background-image: url("../imgs/vertTitlescreen.png"); /*transforms to vertical variation*/
-        justify-content: center;
+        grid-template-areas: "." 
+                             "."
+                             "."
+                             "s"                          /* Slightly off-centers the play button and title and positions it all where we want it */
+                             "."
+                             "."
+                             "."
+                             ".";
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        grid-area: s;
+    }
+    #play {
+        cursor: pointer;
+        box-shadow: 0 4px 80px 0 #FFF755, 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        animation: shadow-pulse 0.75s infinite alternate ease-in-out;
     }
 }
 
-body, button{
+body, a{
     font-family: var(--main-font); /*giving everything the font I want*/
+    
 }
 
-button{
+a{
     width: clamp(225px, 25%, 40%); /*clamp is cool its really convenient compared to media queries, the min width is 100px, 
                                     the preferred width is 25%, and the max is 50%*/
     height: clamp(75px, 7vw, 10vw);
@@ -47,7 +66,10 @@ button{
     box-shadow: 0 4px 20px 0 #FFF755, 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     color: var(--pri);
     border: var(--pri), 3px, solid;
-
+    text-decoration: none;
+    text-align: center;
+    place-content: center;
+    
 }
 
 h1{
@@ -61,4 +83,10 @@ h1{
     cursor: pointer;
     box-shadow: 0 4px 80px 0 #FFF755, 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     animation: shadow-pulse 0.75s infinite alternate ease-in-out;
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
 }
