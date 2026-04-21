@@ -81,4 +81,19 @@ div {
     }
 }
 
+#shelf {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #614200;
+    width: 15%;
+    height: 30%;
+    margin-left: 50%;
+    margin-top: 44vh;
 
+    & .shelfs {
+        background-color: #4A1B00;
+        width: 12.5%;
+        height: 
+    }
+}
