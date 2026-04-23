@@ -21,3 +21,11 @@
     width: 98.8vw;
     background: #6B4E35;
 }
+
+#door1{
+    background: #81522D;
+    height: 30vh;
+    width: clamp(150px, 12vw, 275px);
+    margin-top: 43.5vh;
+    margin-left: 80vw;
+}
