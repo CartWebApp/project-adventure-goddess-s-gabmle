@@ -1,3 +1,5 @@
+let karma = 0;
+
 const story = [
     {
         id: 'intro',
@@ -80,6 +82,31 @@ const story = [
                          speech: "Bro he literally left his keys in the cell door"}, 
                 objective: 'Escape the cell',
                 choices: [{type: next, text: 'Unlock the door'}] 
+            },
+
+            {
+                img: "", //to be inserted
+                speaker: 'Player',
+                place: "Castle Exit",
+                shake: false,
+                dialog: {action: "*Runs towards exit*", 
+                         speech: "Yes! I'm finally out of this damn place! Good riddance."}, 
+                objective: 'Leave the building',
+                choices: [{type: next, text: 'Next'}] 
+            },
+
+            {
+                img: "", //to be inserted
+                speaker: 'Yapper',
+                place: "Castle Exit",
+                shake: true,
+                dialog: {action: "*You bump into a random guy*", 
+                         speech: "Oof! Oh hello there! Have you been to a restaurant called Karma? There's no menu, you just get what you deserve. Anyways have you heard the tale of Dai, Koku and Ten? They're basically a really cool dragon that can"}, 
+                objective: 'Leave the building',
+                choices: [{type: negative, text: `MOVE YOU IDIOTIC SWINE CAN'T YOU SEE I'M TRYING TO GET OUT OF HERE???????????`, karma: karma -= 5}, 
+                          {type: positive, text: `Sounds like an interesting story! However I'm kinda in a rush would you mind telling me after?`, karma: karma += 5},
+                          {type: neutral, text: `...`, karma: karma += 0}
+                         ] 
             },
 
         ]
