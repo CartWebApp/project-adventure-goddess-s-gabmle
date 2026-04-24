@@ -110,14 +110,15 @@ const story = [
             },
 
             {
+                route: 'positive',
                 img: "", //to be inserted
                 speaker: 'Yapper',
                 place: "Castle Exit",
                 shake: true,
-                dialog: {action: "*You bump into a random guy*", 
-                         speech: "Oof! Oh hello there! Have you been to a restaurant called Karma? There's no menu, you just get what you deserve. Anyways have you heard the tale of Dai, Koku and Ten? They're basically a really cool dragon that can"}, 
+                dialog: {action: "*Ohio Impressed*", 
+                         speech: "Yep, well anyway ill let you go on your way"}, 
                 objective: 'Leave the building',
-                choices: [{type: 'negative', text: `MOVE YOU IDIOTIC SWINE CAN'T YOU SEE I'M TRYING TO GET OUT OF HERE???????????`}]
+                choices: [{type: next, text: `Leave`}]
             }
 
         ]
