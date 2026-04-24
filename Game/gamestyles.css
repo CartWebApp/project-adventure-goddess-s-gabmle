@@ -1,5 +1,38 @@
-#textbox {
-    background-image: url('..imgs/Dialogue Box.png');
-    height: 500px;
-    width: 500px;
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 98.5vh;
+    width: 100%;
+}
+
+#interaction {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+
+#dialogueSection {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+#textBox {
+    justify-self: center;
+    align-self: flex-end;
+    background-image: url('../imgs/Dialogue Box.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 950px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
