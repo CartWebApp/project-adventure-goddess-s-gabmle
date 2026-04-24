@@ -1,6 +1,16 @@
 let karmaCounter = 0;
 let karmaNext = '';
 
+
+
+const status = {
+    Hp: 100,
+    MaxHp: 100,
+    Inv: {
+
+    }
+};
+
 const story = [
     {
         id: 'intro',
