@@ -3,23 +3,85 @@ const story = [
         id: 'intro',
         scenes: [
             {
+                img: "",//to be made
                 speaker: 'Narrator',
-                text: "For centuries the luck goddess, Fortuna has looked upon this world. However in recent times, it seems that she has not been looking over you. Your mother has fallen sick and now you have to take care of her.",
-                img: ""//to be made
+                place: cutscene1,
+                shake: false,
+                dialog: "For centuries the luck goddess, Fortuna has looked upon this world. However in recent times, it seems that she has not been looking over you. Your mother has fallen sick and now you have to take care of her.",
+                objective: false,
+                choices: [{type: next, text: 'Begin...'}]
             },
-
+                // player leaves to get medecine for mom
             {   
                 img: "", //to be inserted
                 speaker: 'Player',
                 place: "home",
-                text: "Mann.... I need to get my mom some medecine from the town",
+                shake: false,
+                dialog: "Mann.... I need to get my mom some medecine from the town. Better grab my coin",
                 objective: 'Get mom medecine from the town',
-                choices: [{id: next, text: 'Go outside'}] //this choice only serves as a next
+                choices: [{type: next, text: 'Get coin and leave'}] //this choice only serves as a next
+            },
+                //player about to get caught by guards
+            {
+                img: "", //to be inserted
+                speaker: 'Player',
+                place: "town",
+                shake: false,
+                dialog: "Hmmmm.. where do I find this medecine?",
+                choices: [{type: next, text: 'Search for pharmacy'}] //this choice only serves as a next
+            },
+                //player caught by guards
+            {
+                img: "", //to be inserted
+                speaker: 'Royal Guard',
+                place: "town",
+                shake: true,
+                dialog: "Hey there! You! You look 18, you need to come with us for the mandatory enlistment.", //technically 3 sentences
+                objective: 'Escape the guards',
+                choices: [{type: next, text: 'Next'}] 
+            },
+                //player attempts escape
+            {
+                img: "", //to be inserted
+                speaker: 'Player',
+                place: "town",
+                dialog: "Oh no.. I gotta dash and make it go fast!", //technically 3 sentences
+                objective: 'Escape the guards',
+                choices: [{type: next, text: 'Escape!'}] 
+            },
+                //player bumps into guard and takes player away
+            {
+                img: "", //to be inserted
+                speaker: 'Royal Guard',
+                place: "town",
+                shake: true,
+                dialog: "Nice try pal. Better go even faster next time. I am him.", 
+                objective: 'Escape the guards, FAILED',
+                choices: [{type: next, text: 'Ur lowk cooked bud 😭💔'}] 
             },
 
             {
-                
-            }
+                img: "", //to be inserted
+                speaker: 'Royal Guard',
+                place: "Castle Cell",
+                shake: false,
+                dialog: {action: "*Locks you in the cell but leaves key in the door*", 
+                         speech:"Good luck getting out of this one bud."}, 
+                objective: 'Escape the cell',
+                choices: [{type: next, text: 'Look for any opportunities to escape'}] 
+            }, 
+
+            {
+                img: "", //to be inserted
+                speaker: 'Player',
+                place: "Castle Cell",
+                shake: false,
+                dialog: {action: "", 
+                         speech: "Bro he literally left his keys in the cell door"}, 
+                objective: 'Escape the cell',
+                choices: [{type: next, text: 'Unlock the door'}] 
+            },
+
         ]
     }
 ]
