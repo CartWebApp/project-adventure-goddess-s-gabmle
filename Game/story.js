@@ -17,7 +17,7 @@ const story = [
                 // player leaves to get medecine for mom
             {   
                 img: "", //to be inserted
-                speaker: 'Player',
+                speaker: ['Player'],
                 place: "home",
                 shake: false,
                 dialog: "Mann.... I need to get my mom some medecine from the town. Better grab my coin",
@@ -27,7 +27,7 @@ const story = [
                 //player about to get caught by guards
             {
                 img: "", //to be inserted
-                speaker: 'Player',
+                speaker: ['Player'],
                 place: "town",
                 shake: false,
                 dialog: "Hmmmm.. where do I find this medecine?",
@@ -46,7 +46,7 @@ const story = [
                 //player attempts escape
             {
                 img: "", //to be inserted
-                speaker: 'Player',
+                speaker: ['Player', ],
                 place: "town",
                 dialog: "Oh no.. I gotta dash and make it go fast!", //technically 3 sentences
                 objective: 'Escape the guards',
@@ -76,7 +76,7 @@ const story = [
 
             {
                 img: "", //to be inserted
-                speaker: 'Player',
+                speaker: ['Player', 'happy'],
                 place: "Castle Cell",
                 shake: false,
                 dialog: {action: "", 
@@ -87,7 +87,7 @@ const story = [
 
             {
                 img: "", //to be inserted
-                speaker: 'Player',
+                speaker: ['Player', 'happy' ],
                 place: "Castle Exit",
                 shake: false,
                 dialog: {action: "*Runs towards exit*", 
@@ -116,10 +116,10 @@ const story = [
                 place: "Castle Exit",
                 shake: true,
                 dialog: {action: "*Ohio Impressed*", 
-                         speech: "Yep, well anyway ill let you go on your way"}, 
+                         speech: "Yep! Thanks for listening. Well anyway ill let you go on your way"}, 
                 objective: 'Leave the building',
                 choices: [{type: next, text: `Leave`}]
-            }
+            },
 
         ]
     }
