@@ -8,14 +8,12 @@
     <title>The Goddess's Gamble</title>
 </head>
 
-<body>
-    <section id="game">
+<body class="game">
         <article id="content">
-            <section id="healthBar"></section>
-
+            <div id="healthBar"></div>
+            <div id="objective"></div>
             
 
-            <section id="visual"></section> 
             <section id="interaction">
 
                 <section id="playerspeaking"></section>
@@ -25,18 +23,15 @@
                     <div id="textBox">
                         <h2 id="speaker">Speaker</h2>
                         <p id="dialogue">Text Text Text Text</p>
-                        <button id="poschoice"></button>
-                        <button id="negchoice"></button>
-                        <button id="neuchoice"></button>
+                        <div id="choices">
+                            <button id="poschoice"></button>
+                            <button id="neuchoice"></button>
+                            <button id="negchoice"></button>
+                        </div>
                     </div>
                 </section>
-
             </section>
-            
-
-
         </article>
-    </section>
     <script href="logic.js"></script>
 </body>
 
