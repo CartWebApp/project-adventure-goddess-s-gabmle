@@ -27,12 +27,60 @@
 }
 
 #textBox {
-    justify-self: center;
-    align-self: flex-end;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
     background-image: url('../imgs/Dialogue Box.jpg');
     background-size: cover;
     height: 300px;
     width: 950px;
     background-repeat: no-repeat;
+    justify-content: flex-end;
     background-position: center;
+}
+
+#speaker, #dialogue {
+    margin-left: 75px;
+}
+
+#choices {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    align-items: center;
+    margin-top: 70px;
+    & #poschoice,
+    #neuchoice,
+    #negchoice {
+        width: 180px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+#poschoice {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+    &:hover {
+        box-shadow: 0 0 15px rgba(0, 255, 0 , 1);
+    }
+}
+
+#neuchoice {
+    box-shadow: 
+        0 0 8px rgba(255, 255, 255, 0.8),
+        0 0 4px rgba(0, 0, 0, 0.8);
+    &:hover {
+        box-shadow: 0 0 12px rgba(255, 255, 255, 1);
+        box-shadow: 0 0 6px rgba(0, 0, 0, 1);
+    }
+}
+
+#negchoice {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    &:hover {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 1);
+    }
 }
