@@ -2,7 +2,7 @@ let karmaCounter = 0;
 let karmaNext = '';
 
 
-const story = [
+export const story = [
     {
         id: 'intro', scenes: [
             {

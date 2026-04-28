@@ -1,3 +1,7 @@
+:root{
+    --bg: url('')
+}
+
 #game {
     display: flex;
     flex-direction: column;
@@ -20,7 +24,7 @@
 }
 
 
-#dialogueSection {
+#dialogSection {
     display: flex;
     justify-self: center;
     align-self: center;
@@ -31,7 +35,7 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: 20px;
-    background-image: url('../imgs/Dialogue Box.jpg');
+    background-image: url('../imgs/dialogBox.jpg');
     background-size: cover;
     height: 300px;
     width: 950px;
@@ -40,7 +44,7 @@
     background-position: center;
 }
 
-#speaker, #dialogue {
+#speaker, #dialog {
     margin-left: 75px;
 }
 

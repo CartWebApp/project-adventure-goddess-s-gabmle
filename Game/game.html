@@ -9,30 +9,37 @@
 </head>
 
 <body class="game">
-        <article id="content">
-            <div id="healthBar"></div>
-            <div id="objective"></div>
-            
+    <header>
+        <div id="healthBar"></div>
+        <section id="objective">
+            <h2>Objective:</h2>
+            <p id="objectiveP"></p>
+        </section>
+    </header>
 
-            <section id="interaction">
+    <article id="content">
 
-                <section id="playerspeaking"></section>
-                <section id="otherspeaking"></section>
 
-                <section id="dialogueSection">
-                    <div id="textBox">
-                        <h2 id="speaker">Speaker</h2>
-                        <p id="dialogue">Text Text Text Text</p>
-                        <div id="choices">
-                            <button id="poschoice"></button>
-                            <button id="neuchoice"></button>
-                            <button id="negchoice"></button>
-                        </div>
+        <section id="interaction">
+
+            <section id="playerspeaking"></section>
+            <section id="otherspeaking"></section>
+
+            <section id="dialogSection">
+                <div id="textBox">
+                    <h2 id="speaker">Speaker</h2>
+                    <p id="dialog">Text Text Text Text</p>
+                    <div id="choices">
+                        <button id="poschoice"></button>
+                        <button id="neuchoice"></button>
+                        <button id="negchoice"></button>
                     </div>
-                </section>
+                </div>
             </section>
-        </article>
-    <script href="logic.js"></script>
+        </section>
+    </article>
+    <script type="module" href="ui.js"></script>
+    <script type="module" href="story.js"></script>
 </body>
 
 </html>
