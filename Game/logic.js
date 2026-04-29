@@ -1,18 +1,68 @@
-import story from 'story.js";'
+import { story } from './story.js';
 
+// localstorgae key
+const storageKey = 'gork';
+
+// status object where ui can see and read from it
 const status = {
     Health: 100,
     Inventory: {},
-    Progression: {}
+    Progression: { storyIndex: 0, sceneIndex: 0 },
+    Karma: 0,
+    LastChoice: ''
+};
+
+// save status to localstorage
+function saveStatus() {
+    localStorage.setItem(storageKey, JSON.stringify(status));
 }
-addEventListener("keydown", function(event)){
-    function progression(id, sceneNo){
-            story[]
+
+// load status from localstorage and merge with status 
+function loadStatus() {
+    let statusStr = localStorage.getItem(storageKey);
+    if (statusStr) {
+        let statusData = JSON.parse(statusStr);
+        for (let prop in statusData) {  // goes through all properties and overwrite only existing properties
+            if (statusData.hasOwnProperty(prop)) {
+                status[prop] = statusData[prop];
+            }
+        }
     }
 }
 
+// progression function 
+function progression() {
+    let prog = status.Progression;
+    let chapter = story[prog.storyIndex];
 
-export {status};
+    // advance one scene (single-choice scenes = next)
+    prog.sceneIndex = prog.sceneIndex + 1;
+
+    // if we're on the last scene go to next chapter
+    if (prog.sceneIndex >= chapter.scenes.length) {
+        prog.storyIndex = prog.storyIndex + 1;
+        prog.sceneIndex = 0;
+
+        // if we passed the final chapter, go to last scene b4 it ended
+        if (prog.storyIndex >= story.length) {
+            prog.storyIndex = story.length - 1;
+            let last = story[prog.storyIndex];
+            prog.sceneIndex = (last.scenes || []).length - 1;
+        }
+    }
+
+    // save progression to local storage 
+    saveStatus();
+
+    // return the story and scene index
+    return { storyIndex: prog.storyIndex, sceneIndex: prog.sceneIndex };
+}
+
+
+loadStatus();
+
+// exports functions and the status 
+export { status, progression, saveStatus, loadStatus };
 
 
 // classes

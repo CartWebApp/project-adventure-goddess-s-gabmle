@@ -4,7 +4,7 @@ const objecetiveP = document.getElementById('objectiveP');
 const bg = document.getElementsByTagName('body')
 
 
-import story from 'story.js';
+import {story} from 'story.js';
 import Typewriter from "https://cdn.jsdelivr.net/npm/typewriter-effect@2.22.0/dist/core.min.js";
 const typewriter = new Typewriter(app, {
     loop: true,
@@ -25,6 +25,6 @@ function speakerDialog(text){
     dialog.textContent("")
 }
 
-function choices(choices){
-
+function choices(choices){ //if choices are equal to 1 then give pos choice and neg choice an invisible class
+ 
 }
