@@ -1,6 +1,6 @@
 import { story } from './story.js';
 
-// localstorgae key
+// localstorage key
 const storageKey = 'gork';
 
 // status object where ui can see and read from it
