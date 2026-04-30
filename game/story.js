@@ -10,7 +10,7 @@ export const story = [
             {
                 img: "",//to be made
                 speaker: 'narrator',
-                place: cutscene1,
+                place: 'cutscene1',
                 shake: false,
                 engage: false,
                 dialog: {
@@ -705,7 +705,7 @@ export const story = [
                 engage: false,
                 dialog: {
                     action: '',
-                    speech: 'What are looking at twerp!'
+                    speech: 'What are you looking at twerp!'
                 },
                 objective: 'Help the old lady.',
                 choices: [{type: next, text: "You're ugly face"}]

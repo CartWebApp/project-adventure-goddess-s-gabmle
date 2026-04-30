@@ -1,4 +1,5 @@
 import { story } from './story.js';
+import { pageUpdate } from './ui.js';
 
 // localstorage key
 const storageKey = 'gork';
@@ -7,7 +8,7 @@ const storageKey = 'gork';
 const status = {
     Health: 100,
     Inventory: {},
-    Progression: { storyIndex: 0, sceneIndex: 0 },
+    Progression: { chapterIndex: 0, sceneIndex: 0 },
     Karma: 0,
     LastChoice: ''
 };
@@ -32,21 +33,22 @@ function loadStatus() {
 
 // progression function 
 function progression() {
+    pageUpdate();
     let prog = status.Progression;
-    let chapter = story[prog.storyIndex];
+    let chapter = story[prog.chapterIndex];
 
     // advance one scene (single-choice scenes = next)
     prog.sceneIndex = prog.sceneIndex + 1;
 
     // if we're on the last scene go to next chapter
     if (prog.sceneIndex >= chapter.scenes.length) {
-        prog.storyIndex = prog.storyIndex + 1;
+        prog.chapterIndex = prog.chapterIndex + 1;
         prog.sceneIndex = 0;
 
         // if we passed the final chapter, go to last scene b4 it ended
-        if (prog.storyIndex >= story.length) {
-            prog.storyIndex = story.length - 1;
-            let last = story[prog.storyIndex];
+        if (prog.chapterIndex >= story.length) {
+            prog.chapterIndex = story.length - 1;
+            let last = story[prog.chapterIndex];
             prog.sceneIndex = (last.scenes || []).length - 1;
         }
     }
@@ -55,7 +57,7 @@ function progression() {
     saveStatus();
 
     // return the story and scene index
-    return { storyIndex: prog.storyIndex, sceneIndex: prog.sceneIndex };
+    return { chapterIndex: prog.chapterIndex, sceneIndex: prog.sceneIndex };
 }
 
 
