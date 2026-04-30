@@ -1494,8 +1494,8 @@ export const story = [
         id: '1-4neu', scenes: [
             {
                 img: '',
-                speaker: '',
-                place: '',
+                speaker: 'chief',
+                place: 'village',
                 shake: false,
                 engage: false,
                 dialog: {
@@ -1510,8 +1510,8 @@ export const story = [
         id: '1-4neg', scenes: [
             {
                 img: '',
-                speaker: '',
-                place: '',
+                speaker: 'chief',
+                place: 'village',
                 shake: false,
                 engage: false,
                 dialog: {
