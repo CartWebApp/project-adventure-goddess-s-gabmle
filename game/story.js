@@ -9,7 +9,7 @@ export const story = [
         id: 'intro', scenes: [
             {
                 img: "",//to be made
-                speaker: 'narrator',
+                speaker: 'Narrator',
                 place: 'cutscene1',
                 shake: false,
                 engage: false,
@@ -23,7 +23,7 @@ export const story = [
             // player leaves to get medecine for mom
             {
                 img: "", //to be inserted
-                speaker: 'player',
+                speaker: 'Player',
                 status: 'sad',
                 place: "home",
                 shake: false,
@@ -38,7 +38,7 @@ export const story = [
             //player about to get caught by guards
             {
                 img: "", //to be inserted
-                speaker: 'player',
+                speaker: 'Player',
                 status: 'confused',
                 place: "town",
                 shake: false,
@@ -66,7 +66,7 @@ export const story = [
             //player attempts escape
             {
                 img: "", //to be inserted
-                speaker: 'player',
+                speaker: 'Player',
                 status: 'happy',
                 place: "town",
                 dialog: {
@@ -107,7 +107,7 @@ export const story = [
 
             {
                 img: "", //to be inserted
-                speaker: 'player',
+                speaker: 'Player',
                 status: 'happy',
                 place: "castleCell",
                 shake: false,
@@ -122,7 +122,7 @@ export const story = [
 
             {
                 img: "", //to be inserted
-                speaker: 'player',
+                speaker: 'Player',
                 status: 'happy',
                 place: "castleExit",
                 shake: false,
@@ -137,7 +137,7 @@ export const story = [
 
             {
                 img: "", //to be inserted
-                speaker: 'yapper',
+                speaker: 'Yapper',
                 place: "castleExit",
                 shake: true,
                 engage: false,
@@ -154,7 +154,7 @@ export const story = [
             {
                 route: 'negative',
                 img: "", //to be inserted
-                speaker: 'player',
+                speaker: 'Player',
                 place: "castleExit",
                 shake: true,
                 engage: false,
@@ -169,7 +169,7 @@ export const story = [
             {
                 route: 'positive',
                 img: "", //to be inserted
-                speaker: 'player',
+                speaker: 'Player',
                 place: "castleExit",
                 shake: false,
                 engage: false,
@@ -184,7 +184,7 @@ export const story = [
             {
                 route: 'neutral',
                 img: "", //to be inserted
-                speaker: 'player',
+                speaker: 'Player',
                 place: "castleExit",
                 shake: false,
                 engage: false,
@@ -200,7 +200,7 @@ export const story = [
             {
                 route: 'positive',
                 img: "", //to be inserted
-                speaker: 'yapper',
+                speaker: 'Yapper',
                 place: "castleExit",
                 shake: true,
                 engage: false,
@@ -215,7 +215,7 @@ export const story = [
             {
                 route: 'negative',
                 img: "", //to be inserted
-                speaker: 'yapper',
+                speaker: 'Yapper',
                 place: "castleExit",
                 shake: true,
                 engage: false,
@@ -230,7 +230,7 @@ export const story = [
             {
                 route: 'neutral',
                 img: "", //to be inserted
-                speaker: 'yapper',
+                speaker: 'Yapper',
                 place: "castleExit",
                 shake: true,
                 engage: false,
@@ -248,7 +248,7 @@ export const story = [
         id: '1-1pos', scenes: [
             {
                 img: "", //to be inserted
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: "town",
                 shake: false,
                 engage: false,
@@ -262,7 +262,7 @@ export const story = [
 
             {
                 img: '', //to be inserted
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -276,7 +276,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -290,7 +290,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 place: 'town',
                 shake: true,
                 engage: false,
@@ -304,7 +304,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -318,7 +318,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -332,7 +332,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -346,7 +346,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -360,7 +360,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'cat',
+                speaker: 'Cat',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -374,7 +374,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -391,7 +391,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 alignment: 'positive',
                 place: 'town',
                 shake: false,
@@ -406,7 +406,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 alignment: 'negative',
                 place: 'town',
                 shake: false,
@@ -421,7 +421,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 alignment: 'neutral',
                 place: 'town',
                 shake: false,
@@ -436,7 +436,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -452,7 +452,7 @@ export const story = [
         id: '1-1neu', scenes: [
             {
                 img: "",
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 alignment: 'Neu',
                 place: 'town',
                 shake: false,
@@ -467,7 +467,7 @@ export const story = [
 
             {
                 img: '', //to be inserted
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -481,7 +481,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -494,7 +494,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 place: 'town',
                 shake: true,
                 engage: false,
@@ -508,7 +508,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -522,7 +522,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -536,7 +536,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -550,7 +550,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -564,7 +564,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'cat',
+                speaker: 'Cat',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -578,7 +578,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -595,7 +595,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 alignment: 'positive',
                 place: 'town',
                 shake: false,
@@ -610,7 +610,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 alignment: 'negative',
                 place: 'town',
                 shake: false,
@@ -625,7 +625,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 alignment: 'neutral',
                 place: 'town',
                 shake: false,
@@ -640,7 +640,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -656,7 +656,7 @@ export const story = [
         id: '1-1neg', scenes: [
             {
                 img: "",
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 alignment: 'Neg',
                 place: 'town',
                 shake: false,
@@ -671,7 +671,7 @@ export const story = [
 
             {
                 img: '', //to be inserted
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -685,7 +685,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -699,7 +699,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 place: 'town',
                 shake: true,
                 engage: false,
@@ -713,7 +713,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -727,7 +727,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -741,7 +741,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -755,7 +755,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'cat',
+                speaker: 'Cat',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -769,7 +769,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -786,7 +786,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 alignment: 'positive',
                 place: 'town',
                 shake: false,
@@ -801,7 +801,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 alignment: 'negative',
                 place: 'town',
                 shake: false,
@@ -816,7 +816,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'meanGranny',
+                speaker: 'Mean Granny',
                 alignment: 'neutral',
                 place: 'town',
                 shake: false,
@@ -831,7 +831,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -849,7 +849,7 @@ export const story = [
         id: '1-2pos', scenes: [
             {
                 img: '',
-                speaker: 'duke',
+                speaker: 'Duke',
                 place: 'whitoria',
                 shake: false,
                 engage: false,
@@ -863,7 +863,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'duke',
+                speaker: 'Duke',
                 place: 'whitoria',
                 shake: false,
                 engage: false,
@@ -876,7 +876,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'narrator',
+                speaker: 'Narrator',
                 place: 'whitoriaNight',
                 shake: false,
                 engage: false,
@@ -890,7 +890,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'whitoriaNight',
                 shake: false,
                 engage: false,
@@ -904,7 +904,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'treasury',
                 shake: false,
                 engage: false,
@@ -913,15 +913,15 @@ export const story = [
                     speech: 'The heirloom is just right there. I could really take it if I wanted to.'
                 },
                 objective: "Protect the duke's Heirloom",
-                choices: [{type: next, text: 'Leave it.', karma: karmaCounter += 5},
-                    {type: next, text: 'Take it.', karma: karmaCounter -= 5},
-                    {type: next, text: 'Disregard it.', karma: karmaCounter += 0}
+                choices: [{type: 'positive', text: 'Leave it.', karma: karmaCounter += 5},
+                    {type: 'negative', text: 'Take it.', karma: karmaCounter -= 5},
+                    {type: 'neutral', text: 'Disregard it.', karma: karmaCounter += 0}
                 ]
             },
             
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 alignment: 'positive',
                 place: 'town',
                 shake: false,
@@ -936,7 +936,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 alignment: 'negative',
                 place: 'town',
                 shake: false,
@@ -951,7 +951,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 alignment: 'neutral',
                 place: 'town',
                 shake: false,
@@ -966,7 +966,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -981,7 +981,7 @@ export const story = [
         id: '1-2neu', scenes: [
             {
                 img: '',
-                speaker: 'duke',
+                speaker: 'Duke',
                 place: 'whitoria',
                 shake: false,
                 engage: false,
@@ -994,7 +994,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'duke',
+                speaker: 'Duke',
                 place: 'whitoria',
                 shake: false,
                 engage: false,
@@ -1007,7 +1007,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'narrator',
+                speaker: 'Narrator',
                 place: 'whitoriaNight',
                 shake: false,
                 engage: false,
@@ -1021,7 +1021,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'whitoriaNight',
                 shake: false,
                 engage: false,
@@ -1035,7 +1035,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'treasury',
                 shake: false,
                 engage: false,
@@ -1044,15 +1044,15 @@ export const story = [
                     speech: 'The heirloom is just right there. I could really take it if I wanted to.'
                 },
                 objective: "Protect the duke's Heirloom",
-                choices: [{type: next, text: 'Leave it.', karma: karmaCounter += 5},
-                    {type: next, text: 'Take it.', karma: karmaCounter -= 5},
-                    {type: next, text: 'Disregard it.', karma: karmaCounter += 0}
+                choices: [{type: 'positive', text: 'Leave it.', karma: karmaCounter += 5},
+                    {type: 'negative', text: 'Take it.', karma: karmaCounter -= 5},
+                    {type: 'neutral', text: 'Disregard it.', karma: karmaCounter += 0}
                 ]
             },
             
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 alignment: 'positive',
                 place: 'town',
                 shake: false,
@@ -1067,7 +1067,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 alignment: 'negative',
                 place: 'town',
                 shake: false,
@@ -1082,7 +1082,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 alignment: 'neutral',
                 place: 'town',
                 shake: false,
@@ -1097,7 +1097,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -1112,7 +1112,7 @@ export const story = [
         id: '1-2neg', scenes: [
             {
                 img: '',
-                speaker: 'duke',
+                speaker: 'Duke',
                 place: 'whitoria',
                 shake: false,
                 engage: false,
@@ -1125,7 +1125,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'duke',
+                speaker: 'Duke',
                 place: 'whitoria',
                 shake: false,
                 engage: false,
@@ -1138,7 +1138,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'narrator',
+                speaker: 'Narrator',
                 place: 'whitoriaNight',
                 shake: false,
                 engage: false,
@@ -1152,7 +1152,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'whitoriaNight',
                 shake: false,
                 engage: false,
@@ -1166,7 +1166,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'treasury',
                 shake: false,
                 engage: false,
@@ -1175,15 +1175,15 @@ export const story = [
                     speech: 'The heirloom is just right there. I could really take it if I wanted to.'
                 },
                 objective: "Protect the duke's Heirloom",
-                choices: [{type: next, text: 'Leave it.', karma: karmaCounter += 5},
-                    {type: next, text: 'Take it.', karma: karmaCounter -= 5},
-                    {type: next, text: 'Disregard it.', karma: karmaCounter += 0}
+                choices: [{type: 'positive', text: 'Leave it.', karma: karmaCounter += 5},
+                    {type: 'negative', text: 'Take it.', karma: karmaCounter -= 5},
+                    {type: 'neutral', text: 'Disregard it.', karma: karmaCounter += 0}
                 ]
             },
             
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 alignment: 'positive',
                 place: 'town',
                 shake: false,
@@ -1198,7 +1198,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 alignment: 'negative',
                 place: 'town',
                 shake: false,
@@ -1213,7 +1213,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 alignment: 'neutral',
                 place: 'town',
                 shake: false,
@@ -1228,13 +1228,13 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
                 dialog: {
                     action: '',
-                    speech: "Spare me the small talk of last night, because you're being sent another mission! Go fight Icarus or Spyro."
+                    speech: "Spare me the small talk of last night, because you're being sent another mission! Go fight Icarus or Astro."
                 },
                 objective: 'Fight your boss of choosing.',
                 choices: [{type: next, text: "Next"}]
@@ -1242,7 +1242,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'questBoard',
+                speaker: 'Quest Board',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -1262,7 +1262,7 @@ export const story = [
         id: '1-3pos', scenes: [
             {
                 img: '',
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -1276,7 +1276,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'road',
                 shake: false,
                 engage: false,
@@ -1290,7 +1290,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'astro',
+                speaker: 'Astro',
                 place: 'astroFight',
                 shake: true,
                 engage: false,
@@ -1304,7 +1304,7 @@ export const story = [
 
             { 
                 img: '',
-                speaker: 'astro',
+                speaker: 'Astro',
                 place: 'astroFight',
                 shake: true,
                 engage: true,
@@ -1318,7 +1318,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'astro',
+                speaker: 'Astro',
                 place: 'astroFight',
                 shake: false,
                 engage: false,
@@ -1332,7 +1332,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'astroFight',
                 shake: false,
                 engage: false,
@@ -1346,7 +1346,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -1362,7 +1362,7 @@ export const story = [
         id: '1-3neg', scenes: [
             {
                 img: '',
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -1376,7 +1376,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'road',
                 shake: false,
                 engage: false,
@@ -1390,7 +1390,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'icarus',
+                speaker: 'Icarus',
                 place: 'icarusFight',
                 shake: true,
                 engage: false,
@@ -1404,7 +1404,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'icarus',
+                speaker: 'Icarus',
                 place: 'icarusFight',
                 shake: true,
                 engage: true,
@@ -1418,7 +1418,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'icarus',
+                speaker: 'Icarus',
                 place: 'icarusFight',
                 shake: false,
                 engage: false,
@@ -1432,7 +1432,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'player',
+                speaker: 'Player',
                 place: 'icarusFight',
                 shake: false,
                 engage: false,
@@ -1446,7 +1446,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'prophet',
+                speaker: 'Prophet',
                 place: 'town',
                 shake: false,
                 engage: false,
@@ -1464,7 +1464,7 @@ export const story = [
         id: '1-4pos', scenes: [
             {
                 img: '',
-                speaker: 'chief',
+                speaker: 'Chief',
                 place: 'village',
                 shake: false,
                 engage: false,
@@ -1478,7 +1478,7 @@ export const story = [
 
             {
                 img: '',
-                speaker: 'chief',
+                speaker: 'Chief',
                 place: 'village',
                 shake: false,
                 engage: false,

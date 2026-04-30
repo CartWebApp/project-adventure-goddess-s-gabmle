@@ -44,9 +44,7 @@ function progression() {
     if (prog.sceneIndex >= chapter.scenes.length) {
         prog.chapterIndex = prog.chapterIndex + 1;
         prog.sceneIndex = 0;
-
-        // if we passed the final chapter, go to last scene b4 it ended
-        if (prog.chapterIndex >= story.length) {
+        if (prog.chapterIndex >= story.length) { // if we passed the final chapter, go to last scene b4 it ended
             prog.chapterIndex = story.length - 1;
             let last = story[prog.chapterIndex];
             prog.sceneIndex = (last.scenes || []).length - 1;
