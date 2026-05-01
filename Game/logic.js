@@ -1,5 +1,5 @@
 import { story } from './story.js';
-import { pageUpdate } from './ui.js';
+
 
 // localstorage key
 const storageKey = 'gork';
@@ -33,7 +33,6 @@ function loadStatus() {
 
 // progression function 
 function progression() {
-    pageUpdate();
     let prog = status.Progression;
     let chapter = story[prog.chapterIndex];
 

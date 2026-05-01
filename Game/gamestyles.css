@@ -2,6 +2,10 @@
     --bg: url('')
 }
 
+.hide{
+    display: none;
+}
+
 body {
     display: flex;
     flex-direction: column;

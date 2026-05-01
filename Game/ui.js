@@ -9,13 +9,28 @@ const neuChoice = document.getElementById('neuchoice');
 const posChoice = document.getElementById('poschoice');
 const negChoice = document.getElementById('negchoice');
 
+import { story } from './story.js';
+import {  status, progression, saveStatus, loadStatus } from './logic.js';
+const typewriter = new window.Typewriter(dialogBox, {
+  loop: false,
+  delay: 7,
+});
 
-import { story } from 'story.js';
-import { status } from './logic';
-import Typewriter from "https://cdn.jsdelivr.net/npm/typewriter-effect@2.22.0/dist/core.min.js";
-const typewriter = new Typewriter(app, {
-  loop: true,
-  delay: 75,
+neuChoice.addEventListener('click', function(){
+  progression();
+  pageUpdate();
+});
+
+posChoice.addEventListener('click', function(){
+  status.Karma += 5;
+  progression();
+  pageUpdate();
+});
+
+negChoice.addEventListener('click', function(){
+  status.Karma -= 5;
+  progression();
+  pageUpdate();
 });
 
 function setBG(place) { //gives class to body based on the place you're in to style later
@@ -110,26 +125,40 @@ function setPerson(speaker) { //long switch statement that reads speaker and set
 }
 
 function speakerDialog(text) {
-  dialogBox.textContent = text;
+  typewriter.stop();
+  typewriter
+    .deleteAll(text)                 // reset internal state
+    .typeString(text)
+    .start();
+    console.log(text)
+
+  
 }
 
-function choices(options, pN, neg, neu) { 
+function choices(options) { 
   //if choices are equal to 1 then give pos choice and neg choice an invisible class
- if(options.length === 1){
-  posChoice.className = 'hide';
-  negChoice.className = 'hide';
-  neuChoice.className = 'next';
-  neuChoice.textContent = pN;
- } 
- if (options.length > 1){
-  posChoice.textContent = pN;
-  negChoice.textContent = neg;
-  neuChoice.textContent = neu;
- }
+  if (options[0].type ==='next'){
+    neuChoice.textContent = options[0].text;;
+    neuChoice.className = 'next';
+    posChoice.className = 'hide';
+    negChoice.className = 'hide';
+  }
 
+  if (options[0].type !== 'next'){
+    posChoice.textContent = options[0].text;
+    negChoice.textContent = options[1].text;
+    neuChoice.textContent = options[2].text;
+    neuChoice.className = '';
+    posChoice.className = '';
+    negChoice.className = '';
+  }
 }
 
 function speakerAction(action) {
+
+}
+
+function objective(obj){
 
 }
 
@@ -141,17 +170,18 @@ function pageUpdate() { //grabs what part of the story ur on and distributes
   let dialog = scene.dialog.speech;
   let action = scene.dialog.action;
   let options = scene.choices;
-  let posAndNextText = scene.choices[0].text;
-  let negText = scene.choices[1].text;
-  let neuText = scene.choices[2].text; //because choices is an array i have to split the choice text up since just one choice will give me all 3 sadly
   let obj = scene.objective;
 
   setBG(place);
   setPerson(speaker);
   speakerDialog(dialog);
   speakerAction(action);
-  choices(options, posAndNextText, negText, neuText);
+  choices(options);
   objective(obj)
 }
 
 export { pageUpdate };
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    pageUpdate();
+});
