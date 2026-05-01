@@ -16,21 +16,39 @@ const typewriter = new window.Typewriter(dialogBox, {
   delay: 7,
 });
 
-neuChoice.addEventListener('click', function(){
-  progression();
+function getOptions() {
+  let chapter = story[status.Progression.chapterIndex];
+  let scene = chapter.scenes[status.Progression.sceneIndex];
+  return scene.choices;
+}
+
+function handleChoice(index) {
+  let options = getOptions();
+  let picked = options[index] || options[0];
+
+  if (picked.type === 'positive') {
+    status.Karma += 5;
+  }
+  if (picked.type === 'negative') {
+    status.Karma -= 5;
+  }
+
+  progression(picked);
   pageUpdate();
+}
+
+neuChoice.addEventListener('click', function(){
+  let options = getOptions();
+  let index = options[0] && options[0].type === 'next' ? 0 : 2;
+  handleChoice(index);
 });
 
 posChoice.addEventListener('click', function(){
-  status.Karma += 5;
-  progression();
-  pageUpdate();
+  handleChoice(0);
 });
 
 negChoice.addEventListener('click', function(){
-  status.Karma -= 5;
-  progression();
-  pageUpdate();
+  handleChoice(1);
 });
 
 function setBG(place) { //gives class to body based on the place you're in to style later
@@ -53,7 +71,7 @@ function setBG(place) { //gives class to body based on the place you're in to st
     case 'whitoria':
       bg.className = place;
       break;
-    case 'whitoria':
+    case 'whitoriaNight':
       bg.className = place;
       break;
     case 'treasury':
@@ -86,7 +104,7 @@ function setPerson(speaker) { //long switch statement that reads speaker and set
       speakerTitle.textContent = speaker
       break;
     case 'Royal Guard':
-      speakerPic.className = speaker
+      speakerPic.className = 'royalGuard'
       speakerTitle.textContent = speaker
       break;
     case 'Yapper':
@@ -98,7 +116,7 @@ function setPerson(speaker) { //long switch statement that reads speaker and set
       speakerTitle.textContent = speaker
       break;
     case 'Mean Granny':
-      speakerPic.className = speaker
+      speakerPic.className = 'granny'
       speakerTitle.textContent = speaker
       break;
     case 'Cat':

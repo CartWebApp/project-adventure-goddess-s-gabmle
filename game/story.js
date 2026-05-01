@@ -6,7 +6,7 @@ let karmaNext = '';
 
 export const story = [
     {
-        id: 'intro', scenes: [
+        id: 'intro', scenes: [// 0
             {
                 img: "",//to be made
                 speaker: 'Narrator',
@@ -20,7 +20,7 @@ export const story = [
                 objective: false,
                 choices: [{ type: 'next', text: 'Begin...' }]
             },
-            // player leaves to get medecine for mom
+            // player leaves to get medicine for mom
             {
                 img: "", //to be inserted
                 speaker: 'Player',
@@ -30,9 +30,9 @@ export const story = [
                 engage: false,
                 dialog: {
                     action: '',
-                    speech: "Mann.... I need to get my mom some medecine from the town. Better grab my coin",
+                    speech: "Mann.... I need to get my mom some medicine from the town. Better grab my coin",
                 },
-                objective: 'Get mom medecine from the town',
+                objective: 'Get mom medicine from the town',
                 choices: [{ type: 'next', text: 'Get coin and leave' }] //this choice only serves as a next
             },
             //player about to get caught by guards
@@ -45,7 +45,7 @@ export const story = [
                 engage: false,
                 dialog: {
                     action: '',
-                    speech: "Hmmmm.. where do I find this medecine?",
+                    speech: "Hmmmm.. where do I find this medicine?",
                 },
                 choices: [{ type: 'next', text: 'Search for pharmacy' }] //this choice only serves as a next
             },
@@ -146,15 +146,17 @@ export const story = [
                     speech: "Oof! Oh hello there! Have you been to a restaurant called Karma? There's no menu, you just get what you deserve. Anyways have you heard the tale of Dai, Koku and Ten? They're basically a really cool dragon that can"
                 },
                 objective: 'Leave the building',
-                choices: [{ type: 'positive', text: `Sounds interesting.`, karma: karmaCounter += 5 },
-                    { type: 'negative', text: `GET OUT OF MY WAY`, karma: karmaCounter -= 5, goTo:  },
-                    { type: 'neutral', text: `No thank you`, karma: karmaCounter += 0 }]
+                choices: [{ type: 'positive', text: `Sounds interesting.`, karma: karmaCounter += 5, goTo: 1 },
+                { type: 'negative', text: `GET OUT OF MY WAY`, karma: karmaCounter -= 5, goTo: 2 },
+                { type: 'neutral', text: `No thank you`, karma: karmaCounter += 0, goTo: 3 }]
             },
         ]
     },
 
+    //1-1
+
     {
-        id: '1-1pos', scenes: [
+        id: '1-1pos', scenes: [//1
 
             {
                 route: 'positive',
@@ -194,7 +196,7 @@ export const story = [
                 engage: false,
                 dialog: {
                     action: "",
-                    speech: "Hey young warrior, follow me."
+                    speech: "Hey young warrior you seem nice, follow me."
                 },
                 objective: 'Talk to the suspicious prophet',
                 choices: [{ type: 'next', text: 'What is it?' }]
@@ -306,7 +308,7 @@ export const story = [
                 engage: false,
                 dialog: {
                     action: '*Scratches you*',
-                    speech: ''
+                    speech: '...sssssss REOW'
                 },
                 objective: 'Save the cat.',
                 choices: [{ type: 'next', text: 'Next' }]
@@ -320,311 +322,20 @@ export const story = [
                 engage: false,
                 dialog: {
                     action: '',
-                    speech: 'OUCH! Why you!!'
+                    speech: "OUCH! Don't do that little kitty!!"
                 },
                 objective: 'Save the cat.',
-                choices: [{ type: 'positive', text: 'Save him.', karma: karmaCounter += 5 },
-                { type: 'negative', text: 'Kill him.', karma: karmaCounter -= 5 },
-                { type: 'neutral', text: 'Run away.', karma: karmaCounter += 0 }
+                choices: [{ type: 'positive', text: 'Save him.', karma: karmaCounter += 5, goTo: 4 },
+                { type: 'negative', text: 'Kill him.', karma: karmaCounter -= 5, goTo: 5 },
+                { type: 'neutral', text: 'Leave the cat.', karma: karmaCounter += 0, goTo: 6 }
                 ]
-            },
-
-            {
-                img: '',
-                speaker: 'Mean Granny',
-                alignment: 'positive',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: 'You found my baby! Im sorry for yelling at you earlier... My son just died and I was scared I would lose Minnie too!'
-                },
-                objective: 'Report back to the old lady',
-                choices: [{ type: 'next', text: 'No Problem!' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Mean Granny',
-                alignment: 'negative',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: 'You killed my baby!! I lose my son now I lose my cat too?!!?! Damn you!'
-                },
-                objective: 'Report back to the old lady',
-                choices: [{ type: 'next', text: 'Uh okay.' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Mean Granny',
-                alignment: 'neutral',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: "You couldn't find him? Hmph, useless twat. Get out of my face."
-                },
-                objective: 'Report back to the old lady',
-                choices: [{ type: 'next', text: 'Sorry.' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Prophet',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: "You're finally back. But theres no time to waste. Go help the duke of Whitoria. Whitoria is the kingdom next door so the travel won't take long."
-                },
-                objective: 'Head to Whitoria',
-                choices: [{ type: 'next', text: 'Sir Yes Sir!' }]
-            },
-        ],
-
-        id: '1-1neu', scenes: [
-
-            {
-                route: 'neutral',
-                img: "", //to be inserted
-                speaker: 'Player',
-                place: "castleExit",
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: "",
-                    speech: "Sorry I don't have the time!"
-                },
-                objective: 'Leave the building',
-                choices: [{ type: 'next', text: `Next` }]
-            },
-
-            {
-                route: 'neutral',
-                img: "", //to be inserted
-                speaker: 'Yapper',
-                place: "castleExit",
-                shake: true,
-                engage: false,
-                dialog: {
-                    action: "",
-                    speech: "Oh alright."
-                },
-                objective: 'Leave the building',
-                choices: [{ type: 'next', text: `Leave` }]
             }
 
-            {
-                img: "",
-                speaker: 'Prophet',
-                alignment: 'Neu',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: 'Hey dude, come this way.'
-                },
-                objective: 'Talk to the suspicious prophet',
-                choices: [{ type: 'next', text: 'Yes?' }]
-            },
+        ]
+    },
 
-            {
-                img: '', //to be inserted
-                speaker: 'Prophet',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: 'I have a quest for you. You wish to save your mother, do you not? I have what you seek.'
-                },
-                objective: 'Talk to the suspicious prophet',
-                choices: [{ type: 'next', text: 'So how do I start?' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Prophet',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: 'First and foremost my echo, go up to that woman over there, she needs assistance.'
-                },
-                choices: [{ type: 'next', text: 'Uhh Okay' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Mean Granny',
-                place: 'town',
-                shake: true,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: 'What are looking at twerp!'
-                },
-                objective: 'Help the old lady.',
-                choices: [{ type: 'next', text: 'Nothing!' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Player',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: 'Nothing maam! I was told that you need my help? How can I be of assistance?'
-                },
-                objective: 'Help the old lady.',
-                choices: [{ type: 'next', text: 'Next' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Mean Granny',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: 'Go find my cat! My poor baby is lost and needs to come back to mommy.'
-                },
-                objective: 'Save her cat.',
-                choices: [{ type: 'next', text: 'Okay mommy.' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Player',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '*Searching*',
-                    speech: 'Here kitty kitty kitty kitty kitty!'
-                },
-                objective: 'Save her cat.',
-                choices: [{ type: 'next', text: 'Next' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Player',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: 'Found you! Youre coming with me!'
-                },
-                objective: 'Save her cat.',
-                choices: [{ type: 'next', text: 'Next' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Cat',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '*Scratches you*',
-                    speech: ''
-                },
-                objective: 'Save her cat.',
-                choices: [{ type: 'next', text: 'Next' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Player',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: 'OUCH! Why you!!'
-                },
-                objective: 'Save her cat.',
-                choices: [{ type: 'positive', text: 'Save him.', karma: karmaCounter += 5 },
-                { type: 'negative', text: 'Kill him.', karma: karmaCounter -= 5 },
-                { type: 'neutral', text: 'Run away.', karma: karmaCounter += 0 }
-                ]
-            },
-
-            {
-                img: '',
-                speaker: 'Mean Granny',
-                alignment: 'positive',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: 'You found my baby! Im sorry for yelling at you earlier... My son just died and I was scared I would lose Minnie too!'
-                },
-                objective: 'Report back to the old lady.',
-                choices: [{ type: 'next', text: 'No Problem!' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Mean Granny',
-                alignment: 'negative',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: 'You killed my baby!! I lose my son now I lose my cat too?!!?! Damn you!'
-                },
-                objective: 'Report back to the old lady.',
-                choices: [{ type: 'next', text: 'Uh okay.' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Mean Granny',
-                alignment: 'neutral',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: "You couldn't find him? Hmph, useless twat. Get out of my face."
-                },
-                objective: 'Report back to the old lady.',
-                choices: [{ type: 'next', text: 'Sorry.' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Prophet',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: "You're finally back. But theres no time to waste. Go help the duke of Whitoria. Whitoria is the kingdom next door so the travel won't take long."
-                },
-                objective: 'Head to Whitoria',
-                choices: [{ type: 'next', text: 'Okie Dokie.' }]
-            },
-        ],
-
-        id: '1-1neg', scenes: [
+    {
+        id: '1-1neg', scenes: [//2
             {
                 route: 'negative',
                 img: "", //to be inserted
@@ -779,9 +490,9 @@ export const story = [
                     speech: 'OUCH! Why you!!'
                 },
                 objective: 'Save the cat.',
-                choices: [{ type: 'positive', text: 'Save him.', karma: karmaCounter += 5 },
-                { type: 'negative', text: 'Kill him.', karma: karmaCounter -= 5 },
-                { type: 'neutral', text: 'Run away.', karma: karmaCounter += 0 }
+                choices: [{ type: 'positive', text: 'Save him.', karma: karmaCounter += 5, goTo: 4 },
+                { type: 'negative', text: 'Kill him.', karma: karmaCounter -= 5, goTo: 5 },
+                { type: 'neutral', text: 'Run away.', karma: karmaCounter += 0, goTo: 6 }
                 ]
             },
 
@@ -847,7 +558,278 @@ export const story = [
     },
 
     {
-        id: '1-2pos', scenes: [
+        id: '1-1neu', scenes: [//3
+
+            {
+                route: 'neutral',
+                img: "", //to be inserted
+                speaker: 'Player',
+                place: "castleExit",
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: "",
+                    speech: "Sorry I don't have the time!"
+                },
+                objective: 'Leave the building',
+                choices: [{ type: 'next', text: `Next` }]
+            },
+
+            {
+                route: 'neutral',
+                img: "", //to be inserted
+                speaker: 'Yapper',
+                place: "castleExit",
+                shake: true,
+                engage: false,
+                dialog: {
+                    action: "",
+                    speech: "Oh alright."
+                },
+                objective: 'Leave the building',
+                choices: [{ type: 'next', text: `Leave` }]
+            },
+
+            {
+                img: "",
+                speaker: 'Prophet',
+                alignment: 'Neu',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: 'Yo dude, come this way.'
+                },
+                objective: 'Talk to the suspicious prophet',
+                choices: [{ type: 'next', text: 'Yes?' }]
+            },
+
+            {
+                img: '', //to be inserted
+                speaker: 'Prophet',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: 'I have a quest for you. You wish to save your mother, do you not? I have what you seek.'
+                },
+                objective: 'Talk to the suspicious prophet',
+                choices: [{ type: 'next', text: 'So how do I start?' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Prophet',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: 'First and foremost my echo, go up to that woman over there, she needs assistance.'
+                },
+                choices: [{ type: 'next', text: 'Uhh Okay' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Mean Granny',
+                place: 'town',
+                shake: true,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: 'What are looking at twerp!'
+                },
+                objective: 'Help the old lady.',
+                choices: [{ type: 'next', text: 'Nothing!' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Player',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: 'That weird guy told me you needed help, you need it or nah?'
+                },
+                objective: 'Help the old lady.',
+                choices: [{ type: 'next', text: 'Next' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Mean Granny',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: 'Why are you so nonchalant?! Go find my cat! My poor baby is lost and needs to come back to mommy.'
+                },
+                objective: 'Save her cat.',
+                choices: [{ type: 'next', text: 'Aight' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Player',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '*Searching*',
+                    speech: 'Yo meow meow come here'
+                },
+                objective: 'Save her cat.',
+                choices: [{ type: 'next', text: 'Next' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Player',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: 'Found ya.'
+                },
+                objective: 'Save her cat.',
+                choices: [{ type: 'next', text: 'Next' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Cat',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '*Scratches you*',
+                    speech: 'sssssss..... REOWWWW'
+                },
+                objective: 'Save her cat.',
+                choices: [{ type: 'next', text: 'Next' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Player',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: 'OW. DAMN that hurt!'
+                },
+                objective: 'Save her cat.',
+                choices: [{ type: 'positive', text: 'Save him.', karma: karmaCounter += 5, goTo: 4 },
+                { type: 'negative', text: 'Kill him.', karma: karmaCounter -= 5, goTo: 5 },
+                { type: 'neutral', text: 'Run away.', karma: karmaCounter += 0, goTo: 6 }
+                ]
+            },
+
+            {
+                img: '',
+                speaker: 'Mean Granny',
+                alignment: 'positive',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: 'You found my baby! Im sorry for yelling at you earlier... My son just died and I was scared I would lose Minnie too!'
+                },
+                objective: 'Report back to the old lady.',
+                choices: [{ type: 'next', text: 'No Problem!' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Mean Granny',
+                alignment: 'negative',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: 'You killed my baby!! I lose my son now I lose my cat too?!!?! Damn you!'
+                },
+                objective: 'Report back to the old lady.',
+                choices: [{ type: 'next', text: 'Uh okay.' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Mean Granny',
+                alignment: 'neutral',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: "You couldn't find him? Hmph, useless twat. Get out of my face."
+                },
+                objective: 'Report back to the old lady.',
+                choices: [{ type: 'next', text: 'Sorry.' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Prophet',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: "You're finally back. But theres no time to waste. Go help the duke of Whitoria. Whitoria is the kingdom next door so the travel won't take long."
+                },
+                objective: 'Head to Whitoria',
+                choices: [{ type: 'next', text: 'Okie Dokie.' }]
+            },
+        ]
+    },
+
+
+    //1-2
+
+
+    {
+        id: '1-2pos', scenes: [//4
+
+            {
+                img: '',
+                speaker: 'Mean Granny',
+                alignment: 'positive',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: 'You found my baby! Im sorry for yelling at you earlier... My son just died and I was scared I would lose Minnie too!'
+                },
+                objective: 'Report back to the prophet',
+                choices: [{ type: 'next', text: 'No Problem!' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Prophet',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: "You're finally back. But theres no time to waste. Go help the duke of Whitoria. Whitoria is the kingdom next door so the travel won't take long."
+                },
+                objective: 'Head to Whitoria',
+                choices: [{ type: 'next', text: 'Sir Yes Sir!' }]
+            },
+
             {
                 img: '',
                 speaker: 'Duke',
@@ -935,6 +917,132 @@ export const story = [
                 choices: [{ type: 'next', text: 'Finish your job.' }]
             },
 
+
+
+            {
+
+            },
+
+            {
+                img: '',
+                speaker: 'Prophet',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: "Hope you had a good night last night, because you're being sent another mission! Would you like to fight Icarus or Spyro?"
+                },
+                objective: 'Fight your boss.'
+            }
+        ]
+    },
+
+    {
+        id: '1-2neg', scenes: [//5
+
+            {
+                img: '',
+                speaker: 'Mean Granny',
+                alignment: 'negative',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: 'You killed my baby!! I lose my son now I lose my cat too?!!?! Damn you!'
+                },
+                objective: 'Report back to the prophet',
+                choices: [{ type: 'next', text: 'Uh okay.' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Prophet',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: "You Evil monster... You remind me of me. But theres no time to waste. Go help the duke of Whitoria. Whitoria is the kingdom next door so the travel won't take long."
+                },
+                objective: 'Head to Whitoria',
+                choices: [{ type: 'next', text: 'Sir Yes Sir!' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Duke',
+                place: 'whitoria',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: "You're finally here! Safe to say I'm not glad you're chosen for this task-especially since all the rumors going about you killing that cat...-but not matter! I need your help with something."
+                },
+                choices: [{ type: 'next', text: "I'll do it" }]
+            },
+
+            {
+                img: '',
+                speaker: 'Duke',
+                place: 'whitoria',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: "That's the spirit! You start once the clock strikes 12pm."
+                },
+                choices: [{ type: 'next', text: "Affirmative." }]
+            },
+
+            {
+                img: '',
+                speaker: 'Narrator',
+                place: 'whitoriaNight',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: "Clock strikes 12. Midnight Arrives. The duke asks you to protect his family's heirloom overnight. Be careful of "
+                },
+                objective: false,
+                choices: [{ type: 'next', text: 'Next' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Player',
+                place: 'whitoriaNight',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: "It's go time."
+                },
+                objective: "Protect the duke's Heirloom",
+                choices: [{ type: 'next', text: 'Head to treasury' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Player',
+                place: 'treasury',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: 'The heirloom is just right there. I could really take it if I wanted to.'
+                },
+                objective: "Protect the duke's Heirloom",
+                choices: [{ type: 'positive', text: 'Leave it.', karma: karmaCounter += 5 },
+                { type: 'negative', text: 'Take it.', karma: karmaCounter -= 5 },
+                { type: 'neutral', text: 'Disregard it.', karma: karmaCounter += 0 }
+                ]
+            },
+
+
+
             {
                 img: '',
                 speaker: 'Player',
@@ -973,13 +1081,62 @@ export const story = [
                 engage: false,
                 dialog: {
                     action: '',
-                    speech: "Hope you had a good night last night, because you're being sent another mission! Would you like to fight Icarus or Spyro?"
+                    speech: "Spare me the small talk of last night, because you're being sent another mission! Go fight Icarus or Astro."
                 },
-                objective: 'Fight your boss.'
+                objective: 'Fight your boss of choosing.',
+                choices: [{ type: 'next', text: "Next" }]
+            },
+
+            {
+                img: '',
+                speaker: 'Quest Board',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: "EMBODIMENT OF EGOTISM ICARUS + KARMA, ASTRO - KARMA"
+                },
+                objective: 'Fight your boss of choosing.',
+                choices: [{ type: 'next', text: 'Icarus' },
+                { type: 'next', text: 'Astro' }
+                ]
             }
         ],
+    },
 
-        id: '1-2neu', scenes: [
+    {
+        id: '1-2neu', scenes: [//6
+
+            {
+                img: '',
+                speaker: 'Mean Granny',
+                alignment: 'neutral',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: "You couldn't find him? Hmph, useless twat. Get out of my face."
+                },
+                objective: 'Report back to the prophet',
+                choices: [{ type: 'next', text: 'Mb gng.' }]
+            },
+
+            {
+                img: '',
+                speaker: 'Prophet',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '',
+                    speech: "You're finally back. But theres no time to waste. Go help the duke of Whitoria. Whitoria is the kingdom next door so the travel won't take long."
+                },
+                objective: 'Head to Whitoria',
+                choices: [{ type: 'next', text: 'Sir Yes Sir!' }]
+            },
+
             {
                 img: '',
                 speaker: 'Duke',
@@ -1108,79 +1265,15 @@ export const story = [
                 },
                 objective: 'Fight your boss.'
             }
-        ],
+        ]
+    },
 
-        id: '1-2neg', scenes: [
-            {
-                img: '',
-                speaker: 'Duke',
-                place: 'whitoria',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: "You're finally here! Safe to say I'm not glad you're chosen for this task-especially since all the rumors going about you killing that cat...-but not matter! I need your help with something."
-                },
-                choices: [{ type: 'next', text: "I'll do it" }]
-            },
 
-            {
-                img: '',
-                speaker: 'Duke',
-                place: 'whitoria',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: "That's the spirit! You start once the clock strikes 12pm."
-                },
-                choices: [{ type: 'next', text: "Affirmative." }]
-            },
+    //1-3
 
-            {
-                img: '',
-                speaker: 'Narrator',
-                place: 'whitoriaNight',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: "Clock strikes 12. Midnight Arrives. The duke asks you to protect his family's heirloom overnight. Be careful of "
-                },
-                objective: false,
-                choices: [{ type: 'next', text: 'Next' }]
-            },
 
-            {
-                img: '',
-                speaker: 'Player',
-                place: 'whitoriaNight',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: "It's go time."
-                },
-                objective: "Protect the duke's Heirloom",
-                choices: [{ type: 'next', text: 'Head to treasury' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Player',
-                place: 'treasury',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: 'The heirloom is just right there. I could really take it if I wanted to.'
-                },
-                objective: "Protect the duke's Heirloom",
-                choices: [{ type: 'positive', text: 'Leave it.', karma: karmaCounter += 5 },
-                { type: 'negative', text: 'Take it.', karma: karmaCounter -= 5 },
-                { type: 'neutral', text: 'Disregard it.', karma: karmaCounter += 0 }
-                ]
-            },
+    {
+        id: '1-3pos', scenes: [//7
 
             {
                 img: '',
@@ -1197,70 +1290,6 @@ export const story = [
                 choices: [{ type: 'next', text: 'Finish your job.' }]
             },
 
-            {
-                img: '',
-                speaker: 'Player',
-                alignment: 'negative',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '*You let the evil thoughts get in and you steal the heirloom.',
-                    speech: ''
-                },
-                objective: 'Report back to the prophet',
-                choices: [{ type: 'next', text: 'Run.' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Player',
-                alignment: 'neutral',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '*You completely disregard the thought, allowing it to leave your conscious.*',
-                    speech: ""
-                },
-                objective: 'Report back to the prophet',
-                choices: [{ type: 'next', text: 'Finish your job.' }]
-            },
-
-            {
-                img: '',
-                speaker: 'Prophet',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: "Spare me the small talk of last night, because you're being sent another mission! Go fight Icarus or Astro."
-                },
-                objective: 'Fight your boss of choosing.',
-                choices: [{ type: 'next', text: "Next" }]
-            },
-
-            {
-                img: '',
-                speaker: 'Quest Board',
-                place: 'town',
-                shake: false,
-                engage: false,
-                dialog: {
-                    action: '',
-                    speech: "EMBODIMENT OF EGOTISM ICARUS + KARMA, ASTRO - KARMA"
-                },
-                objective: 'Fight your boss of choosing.',
-                choices: [{ type: 'next', text: 'Icarus' },
-                { type: 'next', text: 'Astro' }
-                ]
-            }
-        ],
-    },
-
-    {
-        id: '1-3pos', scenes: [
             {
                 img: '',
                 speaker: 'Prophet',
@@ -1358,9 +1387,26 @@ export const story = [
                 objective: "Help the Village Chief",
                 choices: [{ type: 'next', text: 'Fine' }]
             }
-        ],
+        ]
+    },
 
-        id: '1-3neg', scenes: [
+    {
+        id: '1-3neg', scenes: [//8
+            {
+                img: '',
+                speaker: 'Player',
+                alignment: 'negative',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '*You let the evil thoughts get in and you steal the heirloom.',
+                    speech: ''
+                },
+                objective: 'Report back to the prophet',
+                choices: [{ type: 'next', text: 'Run.' }]
+            },
+
             {
                 img: '',
                 speaker: 'Prophet',
@@ -1462,7 +1508,30 @@ export const story = [
     },
 
     {
-        id: '1-4pos', scenes: [
+        id: '1-3neu', scenes: [//9
+            {
+                img: '',
+                speaker: 'Player',
+                alignment: 'neutral',
+                place: 'town',
+                shake: false,
+                engage: false,
+                dialog: {
+                    action: '*You completely disregard the thought, allowing it to leave your conscious.*',
+                    speech: ""
+                },
+                objective: 'Report back to the prophet',
+                choices: [{ type: 'next', text: 'Finish your job.' }]
+            }
+        ]
+    },
+
+
+    //1-4
+
+
+    {
+        id: '1-4pos', scenes: [//10
             {
                 img: '',
                 speaker: 'Chief',
@@ -1490,9 +1559,11 @@ export const story = [
                 objective: "Save the chief's daughter.",
 
             }
-        ],
+        ]
+    },
 
-        id: '1-4neu', scenes: [
+    {
+        id: '1-4neu', scenes: [//11
             {
                 img: '',
                 speaker: 'chief',
@@ -1506,9 +1577,11 @@ export const story = [
                 objective: 'Help the Village Chief',
                 choices: [{ type: 'next', text: "I'm on it." }]
             }
-        ],
+        ]
+    },
 
-        id: '1-4neg', scenes: [
+    {
+        id: '1-4neg', scenes: [//12
             {
                 img: '',
                 speaker: 'chief',
@@ -1524,7 +1597,5 @@ export const story = [
             }
         ]
     }
-
-
 ]
 
