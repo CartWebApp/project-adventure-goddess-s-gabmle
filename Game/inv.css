@@ -1,0 +1,114 @@
+:root {
+    --bg-color: #D7B06A;
+    --boxes-color: #80634A;
+    --border-radius: 20px;
+    --box-shadow: -4px 5px 8px rgba(0, 0, 0, 0.8);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#inventory {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 80% 20%;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    box-sizing: border-box;
+}
+
+/* Top Left */
+
+.hyglyphs {
+    grid-column: 1;
+    grid-row: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+    gap: 8px;
+
+    box-sizing: border-box;
+
+    overflow: hidden; /* prevents bleed into bottom-left */
+}
+.hyg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--boxes-color);
+    border-radius: var(--border-radius);
+    width: 100%;
+    height: 10%;
+    margin-bottom: -5px;
+    margin-top: 10px;
+    font-size: 40px;
+    box-sizing: border-box;
+    box-shadow: var(--box-shadow);
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* Top Right */
+
+#status {
+    display: flex;
+    justify-content: center;
+    background-color: var(--boxes-color);
+    text-align: center;
+    font-size: 50px;
+    height: 98%;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Bottom Left */
+
+.armor {
+    grid-column: 1;
+    grid-row: 2;
+
+    display: flex;
+    gap: 10px;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+}
+
+.accessories {
+    flex: 1;
+    background-color: var(--boxes-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Bottom Right */
+
+.wpncontainer {
+    padding: 10px;
+}
+
+.weapon {
+    height: 100%;
+    width: 100%;
+    background-color: var(--boxes-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+

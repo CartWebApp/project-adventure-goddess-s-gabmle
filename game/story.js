@@ -147,7 +147,7 @@ export const story = [
                 },
                 objective: 'Leave the building',
                 choices: [{ type: 'positive', text: `Sounds interesting.`, karma: karmaCounter += 5 },
-                    { type: 'negative', text: `GET OUT OF MY WAY`, karma: karmaCounter -= 5, goTo:  },
+                    { type: 'negative', text: `GET OUT OF MY WAY`, karma: karmaCounter -= 5, goTo: '1-1neg' },
                     { type: 'neutral', text: `No thank you`, karma: karmaCounter += 0 }]
             },
         ]
@@ -419,7 +419,7 @@ export const story = [
                 },
                 objective: 'Leave the building',
                 choices: [{ type: 'next', text: `Leave` }]
-            }
+            },
 
             {
                 img: "",
