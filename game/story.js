@@ -865,7 +865,7 @@ export const story = [
                 engage: false,
                 dialog: {
                     action: '',
-                    speech: "Clock strikes 12. Midnight Arrives. The duke asks you to protect his family's heirloom overnight. Be careful of "
+                    speech: "Clock strikes 12. Midnight Arrives. The duke asks you to protect his family's heirloom overnight. Be careful of thieves."
                 },
                 objective: false,
                 choices: [{ type: 'next', text: 'Next' }]
