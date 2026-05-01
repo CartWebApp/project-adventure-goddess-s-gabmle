@@ -5,8 +5,10 @@ import { story } from './story.js';
 const storageKey = 'gork';
 
 // status object where ui can see and read from it
-const status = {
-    Health: 100,
+export const status = {
+    health: '100',
+    attack: '10',
+    chance: '50',
     Inventory: {},
     Progression: { chapterIndex: 0, sceneIndex: 0 },
     Karma: 0,
@@ -14,12 +16,12 @@ const status = {
 };
 
 // save status to localstorage
-function saveStatus() {
+export function saveStatus() {
     localStorage.setItem(storageKey, JSON.stringify(status));
 }
 
 // load status from localstorage and merge with status 
-function loadStatus() {
+export function loadStatus() {
     let statusStr = localStorage.getItem(storageKey);
     if (statusStr) {
         let statusData = JSON.parse(statusStr);
@@ -71,7 +73,7 @@ function progression(selectedChoice) {
 loadStatus();
 
 // exports functions and the status 
-export { status, progression, saveStatus, loadStatus };
+// export { status, progression, saveStatus, loadStatus };
 
 
 // classes
@@ -91,3 +93,4 @@ class enemy {
         this.dmg = dmg;
     }
 }
+
