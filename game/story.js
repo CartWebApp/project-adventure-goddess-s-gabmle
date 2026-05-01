@@ -18,7 +18,7 @@ export const story = [
                     speech:"For centuries the luck goddess, Fortuna has looked upon this world. However in recent times, it seems that she has not been looking over you. Your mother has fallen sick and now you have to take care of her."
                 },
                 objective: false,
-                choices: [{ type: next, text: 'Begin...' }]
+                choices: [{ type: 'next', text: 'Begin...' }]
             },
             // player leaves to get medecine for mom
             {
@@ -33,7 +33,7 @@ export const story = [
                     speech: "Mann.... I need to get my mom some medecine from the town. Better grab my coin",
                 },
                 objective: 'Get mom medecine from the town',
-                choices: [{ type: next, text: 'Get coin and leave' }] //this choice only serves as a next
+                choices: [{ type: 'next', text: 'Get coin and leave' }] //this choice only serves as a 'next'
             },
             //player about to get caught by guards
             {
@@ -47,7 +47,7 @@ export const story = [
                     action: '',
                     speech: "Hmmmm.. where do I find this medecine?",
                 },
-                choices: [{ type: next, text: 'Search for pharmacy' }] //this choice only serves as a next
+                choices: [{ type: 'next', text: 'Search for pharmacy' }] //this choice only serves as a 'next'
             },
             //player caught by guards
             {
@@ -61,7 +61,7 @@ export const story = [
                     speech: "Hey there! You! You look 18, you need to come with us for the mandatory enlistment.", //technically 3 sentences
                 },
                 objective: 'Escape the guards',
-                choices: [{ type: next, text: 'Next' }]
+                choices: [{ type: 'next', text: 'Next' }]
             },
             //player attempts escape
             {
@@ -74,7 +74,7 @@ export const story = [
                     speech: "Oh no.. I gotta dash and make it go fast!",
                 },
                 objective: 'Escape the guards',
-                choices: [{ type: next, text: 'Escape!' }]
+                choices: [{ type: 'next', text: 'Escape!' }]
             },
             //player bumps into guard and takes player away
             {
@@ -85,10 +85,10 @@ export const story = [
                 engage: false,
                 dialog: {
                     action: '',
-                    speech: "Nice try pal. Better go even faster next time. I am him.",
+                    speech: "Nice try pal. Better go even faster 'next' time. I am him.",
                 },
                 objective: 'Escape the guards, FAILED',
-                choices: [{ type: next, text: 'Ur lowk cooked bud 😭💔' }]
+                choices: [{ type: 'next', text: 'Ur lowk cooked bud 😭💔' }]
             },
 
             {
@@ -102,7 +102,7 @@ export const story = [
                     speech: "Good luck getting out of this one bud."
                 },
                 objective: 'Escape the cell',
-                choices: [{ type: next, text: 'Look for any opportunities to escape' }]
+                choices: [{ type: 'next', text: 'Look for any opportunities to escape' }]
             },
 
             {
@@ -117,7 +117,7 @@ export const story = [
                     speech: "Bro he literally left his keys in the cell door"
                 },
                 objective: 'Escape the cell',
-                choices: [{ type: next, text: 'Unlock the door' }]
+                choices: [{ type: 'next', text: 'Unlock the door' }]
             },
 
             {
@@ -132,7 +132,7 @@ export const story = [
                     speech: "Yes! I'm finally out of this damn place! Good riddance."
                 },
                 objective: 'Leave the building',
-                choices: [{ type: next, text: 'Next' }]
+                choices: [{ type: 'next', text: 'Next' }]
             },
 
             {
@@ -163,7 +163,7 @@ export const story = [
                     speech: "GET OUT OF MY WAY YOU PATHETIC SWINE!"
                 },
                 objective: 'Leave the building',
-                choices: [{ type: next, text: `Next`}]
+                choices: [{ type: 'next', text: `'Next'`}]
             },
 
             {
@@ -178,7 +178,7 @@ export const story = [
                     speech: "Sounds interesting, sure how does it go?"
                 },
                 objective: 'Leave the building',
-                choices: [{ type: next, text: `Next`}]
+                choices: [{ type: 'next', text: `'Next'`}]
             },
 
             {
@@ -193,7 +193,7 @@ export const story = [
                     speech: "Sorry I don't have the time!"
                 },
                 objective: 'Leave the building',
-                choices: [{ type: next, text: `Next`}]
+                choices: [{ type: 'next', text: `'Next'`}]
             },
             
 
@@ -209,7 +209,7 @@ export const story = [
                     speech: "And that's all! Thanks for listening. Well anyway I'll let you go on your way now"
                 },
                 objective: 'Leave the building',
-                choices: [{ type: next, text: `Leave` }]
+                choices: [{ type: 'next', text: `Leave` }]
             },
 
             {
@@ -224,7 +224,7 @@ export const story = [
                     speech: "Oh :(, okay see you later"
                 },
                 objective: 'Leave the building',
-                choices: [{ type: next, text: `Leave` }]
+                choices: [{ type: 'next', text: `Leave` }]
             },
 
             {
@@ -239,7 +239,7 @@ export const story = [
                     speech: "Oh alright."
                 },
                 objective: 'Leave the building',
-                choices: [{ type: next, text: `Leave` }]
+                choices: [{ type: 'next', text: `Leave` }]
             }
         ]
     },
@@ -257,7 +257,7 @@ export const story = [
                     speech: "Hey young warrior, follow me."
                 },
                 objective: 'Talk to the suspicious prophet',
-                choices: [{ type: next, text: 'What is it?'}]
+                choices: [{ type: 'next', text: 'What is it?'}]
             },
 
             {
@@ -271,7 +271,7 @@ export const story = [
                     speech: 'I have a quest for you. You wish to save your mother, do you not? I have what you seek.'
                 },
                 objective: 'Talk to the suspicious prophet',
-                choices: [{type: next, text: 'So how do I start?'}]
+                choices: [{type: 'next', text: 'So how do I start?'}]
             },
 
             {
@@ -285,7 +285,7 @@ export const story = [
                     speech: 'First and foremost my echo, go up to that lady over there, she needs assistance.'
                 },
                 objective: 'Talk to the suspicious prophet',
-                choices: [{type: next, text: 'Um Okay'}]
+                choices: [{type: 'next', text: 'Um Okay'}]
             },
 
             {
@@ -299,7 +299,7 @@ export const story = [
                     speech: 'What are looking at twerp!'
                 },
                 objective: 'Help the old lady.',
-                choices: [{type: next, text: 'Nothing!'}]
+                choices: [{type: 'next', text: 'Nothing!'}]
             },
 
             {
@@ -313,7 +313,7 @@ export const story = [
                     speech: 'Nothing maam! I was told that you need my help? How can I be of assistance?'
                 },
                 objective: 'Help the old lady.',
-                choices: [{type: next, text: 'Next'}]
+                choices: [{type: 'next', text: 'Next'}]
             },
 
             {
@@ -327,7 +327,7 @@ export const story = [
                     speech: 'Go find my cat! My poor baby is lost and needs to come back to mommy.'
                 },
                 objective: 'Help the old lady.',
-                choices: [{type: next, text:'Okay mommy.'}]
+                choices: [{type: 'next', text:'Okay mommy.'}]
             },
 
             {
@@ -341,7 +341,7 @@ export const story = [
                     speech: 'Here kitty kitty kitty kitty kitty!'
                 },
                 objective: 'Save the cat.',
-                choices: [{type:next, text: 'Next'}]
+                choices: [{type:'next', text: 'Next'}]
             },
 
             {
@@ -355,7 +355,7 @@ export const story = [
                     speech: 'Found you! Youre coming with me!'
                 },
                 objective: 'Save the cat.',
-                choices: [{type:next, text: 'Next'}]
+                choices: [{type:'next', text: 'Next'}]
             },
 
             {
@@ -369,7 +369,7 @@ export const story = [
                     speech: ''
                 },
                 objective: 'Save the cat.',
-                choices: [{type:next, text: 'Next'}]
+                choices: [{type:'next', text: 'Next'}]
             },
 
             {
@@ -383,9 +383,9 @@ export const story = [
                     speech: 'OUCH! Why you!!'
                 },
                 objective: 'Save the cat.',
-                choices: [{type:next, text: 'Save him.', karma: karmaCounter += 5} ,
-                    {type: next, text: 'Kill him.', karma: karmaCounter -= 5},
-                    {type: next, text: 'Run away.', karma: karmaCounter += 0}
+                choices: [{type:'next', text: 'Save him.', karma: karmaCounter += 5} ,
+                    {type: 'next', text: 'Kill him.', karma: karmaCounter -= 5},
+                    {type: 'next', text: 'Run away.', karma: karmaCounter += 0}
                 ]
             },
 
@@ -401,7 +401,7 @@ export const story = [
                     speech: 'You found my baby! Im sorry for yelling at you earlier... My son just died and I was scared I would lose Minnie too!'
                 },
                 objective: 'Report back to the old lady',
-                choices: [{type:next, text: 'No Problem!'}]
+                choices: [{type:'next', text: 'No Problem!'}]
             },
 
             {
@@ -416,7 +416,7 @@ export const story = [
                     speech: 'You killed my baby!! I lose my son now I lose my cat too?!!?! Damn you!'
                 },
                 objective: 'Report back to the old lady',
-                choices: [{type:next, text: 'Uh okay.'}]
+                choices: [{type:'next', text: 'Uh okay.'}]
             },
 
             {
@@ -431,7 +431,7 @@ export const story = [
                     speech: "You couldn't find him? Hmph, useless twat. Get out of my face."
                 },
                 objective: 'Report back to the old lady',
-                choices: [{type:next, text: 'Sorry.'}]
+                choices: [{type:'next', text: 'Sorry.'}]
             },
 
             {
@@ -442,10 +442,10 @@ export const story = [
                 engage: false,
                 dialog: {
                     action: '',
-                    speech: "You're finally back. But theres no time to waste. Go help the duke of Whitoria. Whitoria is the kingdom next door so the travel won't take long."
+                    speech: "You're finally back. But theres no time to waste. Go help the duke of Whitoria. Whitoria is the kingdom 'next' door so the travel won't take long."
                 },
                 objective: 'Head to Whitoria',
-                choices: [{type:next, text: 'Sir Yes Sir!'}]
+                choices: [{type:'next', text: 'Sir Yes Sir!'}]
             },
         ],
 
@@ -462,7 +462,7 @@ export const story = [
                     speech: 'Hey dude, come this way.'
                 },
                 objective: 'Talk to the suspicious prophet',
-                choices: [{ type: next, text: 'Yes?'}]
+                choices: [{ type: 'next', text: 'Yes?'}]
             },
 
             {
@@ -476,7 +476,7 @@ export const story = [
                     speech: 'I have a quest for you. You wish to save your mother, do you not? I have what you seek.'
                 },
                 objective: 'Talk to the suspicious prophet',
-                choices: [{type: next, text: 'So how do I start?'}]
+                choices: [{type: 'next', text: 'So how do I start?'}]
             },
 
             {
@@ -489,7 +489,7 @@ export const story = [
                     action: '',
                     speech: 'First and foremost my echo, go up to that woman over there, she needs assistance.'
                 },
-                choices: [{type: next, text: 'Uhh Okay'}]
+                choices: [{type: 'next', text: 'Uhh Okay'}]
             },
 
             {
@@ -503,7 +503,7 @@ export const story = [
                     speech: 'What are looking at twerp!'
                 },
                 objective: 'Help the old lady.',
-                choices: [{type: next, text: 'Nothing!'}]
+                choices: [{type: 'next', text: 'Nothing!'}]
             },
 
             {
@@ -517,7 +517,7 @@ export const story = [
                     speech: 'Nothing maam! I was told that you need my help? How can I be of assistance?'
                 },
                 objective: 'Help the old lady.',
-                choices: [{type: next, text: 'Next'}]
+                choices: [{type: 'next', text: 'Next'}]
             },
 
             {
@@ -531,7 +531,7 @@ export const story = [
                     speech: 'Go find my cat! My poor baby is lost and needs to come back to mommy.'
                 },
                 objective: 'Save her cat.',
-                choices: [{type: next, text:'Okay mommy.'}]
+                choices: [{type: 'next', text:'Okay mommy.'}]
             },
 
             {
@@ -545,7 +545,7 @@ export const story = [
                     speech: 'Here kitty kitty kitty kitty kitty!'
                 },
                 objective: 'Save her cat.',
-                choices: [{type:next, text: 'Next'}]
+                choices: [{type:'next', text: 'Next'}]
             },
 
             {
@@ -559,7 +559,7 @@ export const story = [
                     speech: 'Found you! Youre coming with me!'
                 },
                 objective: 'Save her cat.',
-                choices: [{type:next, text: 'Next'}]
+                choices: [{type:'next', text: 'Next'}]
             },
 
             {
@@ -573,7 +573,7 @@ export const story = [
                     speech: ''
                 },
                 objective: 'Save her cat.',
-                choices: [{type:next, text: 'Next'}]
+                choices: [{type:'next', text: 'Next'}]
             },
 
             {
@@ -587,9 +587,9 @@ export const story = [
                     speech: 'OUCH! Why you!!'
                 },
                 objective: 'Save her cat.',
-                choices: [{type:next, text: 'Save him.', karma: karmaCounter += 5} ,
-                    {type: next, text: 'Kill him.', karma: karmaCounter -= 5},
-                    {type: next, text: 'Run away.', karma: karmaCounter += 0}
+                choices: [{type:'next', text: 'Save him.', karma: karmaCounter += 5} ,
+                    {type: 'next', text: 'Kill him.', karma: karmaCounter -= 5},
+                    {type: 'next', text: 'Run away.', karma: karmaCounter += 0}
                 ]
             },
 
@@ -605,7 +605,7 @@ export const story = [
                     speech: 'You found my baby! Im sorry for yelling at you earlier... My son just died and I was scared I would lose Minnie too!'
                 },
                 objective: 'Report back to the old lady.',
-                choices: [{type:next, text: 'No Problem!'}]
+                choices: [{type:'next', text: 'No Problem!'}]
             },
 
             {
@@ -620,7 +620,7 @@ export const story = [
                     speech: 'You killed my baby!! I lose my son now I lose my cat too?!!?! Damn you!'
                 },
                 objective: 'Report back to the old lady.',
-                choices: [{type:next, text: 'Uh okay.'}]
+                choices: [{type:'next', text: 'Uh okay.'}]
             },
 
             {
@@ -635,7 +635,7 @@ export const story = [
                     speech: "You couldn't find him? Hmph, useless twat. Get out of my face."
                 },
                 objective: 'Report back to the old lady.',
-                choices: [{type:next, text: 'Sorry.'}]
+                choices: [{type:'next', text: 'Sorry.'}]
             },
 
             {
@@ -646,10 +646,10 @@ export const story = [
                 engage: false,
                 dialog: {
                     action: '',
-                    speech: "You're finally back. But theres no time to waste. Go help the duke of Whitoria. Whitoria is the kingdom next door so the travel won't take long."
+                    speech: "You're finally back. But theres no time to waste. Go help the duke of Whitoria. Whitoria is the kingdom 'next' door so the travel won't take long."
                 },
                 objective: 'Head to Whitoria',
-                choices: [{type:next, text: 'Okie Dokie.'}]
+                choices: [{type:'next', text: 'Okie Dokie.'}]
             },
         ],
 
@@ -666,7 +666,7 @@ export const story = [
                     speech: 'Hey loser, follow me if you want to live.'
                 },
                 objective: 'Talk to the suspicious prophet',
-                choices: [{ type: next, text: 'What?'}]
+                choices: [{ type: 'next', text: 'What?'}]
             },
 
             {
@@ -680,7 +680,7 @@ export const story = [
                     speech: "I have a quest for you. You want to save your mother, right? I know how. However, what's in it for me?"
                 },
                 objective: 'Talk to the suspicious prophet',
-                choices: [{type: next, text: "I'll do anything."}]
+                choices: [{type: 'next', text: "I'll do anything."}]
             },
 
             {
@@ -694,7 +694,7 @@ export const story = [
                     speech: "That's what I like to hear, my echo, now go up to that foid over there, she needs assistance."
                 },
                 objective: 'Talk to the suspicious prophet',
-                choices: [{type: next, text: 'Ok'}]
+                choices: [{type: 'next', text: 'Ok'}]
             },
 
             {
@@ -708,7 +708,7 @@ export const story = [
                     speech: 'What are you looking at twerp!'
                 },
                 objective: 'Help the old lady.',
-                choices: [{type: next, text: "You're ugly face"}]
+                choices: [{type: 'next', text: "You're ugly face"}]
             },
 
             {
@@ -722,7 +722,7 @@ export const story = [
                     speech: 'How rude! Anyways, go find my cat! My poor baby is lost and needs to come back to mommy.'
                 },
                 objective: 'Help the old lady.',
-                choices: [{type: next, text:'Whatever'}]
+                choices: [{type: 'next', text:'Whatever'}]
             },
 
             {
@@ -736,7 +736,7 @@ export const story = [
                     speech: 'Where are you, you dumb feline!'
                 },
                 objective: 'Save the cat.',
-                choices: [{type:next, text: 'Next'}]
+                choices: [{type:'next', text: 'Next'}]
             },
 
             {
@@ -750,7 +750,7 @@ export const story = [
                     speech: 'Found you! Youre coming with me!'
                 },
                 objective: 'Save the cat.',
-                choices: [{type:next, text: 'Next'}]
+                choices: [{type:'next', text: 'Next'}]
             },
 
             {
@@ -764,7 +764,7 @@ export const story = [
                     speech: ''
                 },
                 objective: 'Save the cat.',
-                choices: [{type:next, text: 'Next'}]
+                choices: [{type:'next', text: 'Next'}]
             },
 
             {
@@ -778,9 +778,9 @@ export const story = [
                     speech: 'OUCH! Why you!!'
                 },
                 objective: 'Save the cat.',
-                choices: [{type:next, text: 'Save him.', karma: karmaCounter += 5} ,
-                    {type: next, text: 'Kill him.', karma: karmaCounter -= 5},
-                    {type: next, text: 'Run away.', karma: karmaCounter += 0}
+                choices: [{type:'next', text: 'Save him.', karma: karmaCounter += 5} ,
+                    {type: 'next', text: 'Kill him.', karma: karmaCounter -= 5},
+                    {type: 'next', text: 'Run away.', karma: karmaCounter += 0}
                 ]
             },
 
@@ -796,7 +796,7 @@ export const story = [
                     speech: 'You found my baby! Im sorry for yelling at you earlier... My son just died and I was scared I would lose Minnie too!'
                 },
                 objective: 'Report back to the old lady.',
-                choices: [{type:next, text: 'Yeah yeah, whatever.'}]
+                choices: [{type:'next', text: 'Yeah yeah, whatever.'}]
             },
 
             {
@@ -811,7 +811,7 @@ export const story = [
                     speech: 'You killed my baby!! I lose my son now I lose my cat too?!!?! Damn you!'
                 },
                 objective: 'Report back to the old lady.',
-                choices: [{type:next, text: 'Whatever'}]
+                choices: [{type:'next', text: 'Whatever'}]
             },
 
             {
@@ -826,7 +826,7 @@ export const story = [
                     speech: "You couldn't find him? Hmph, useless twat. Get out of my face."
                 },
                 objective: 'Report back to the old lady.',
-                choices: [{type:next, text: 'Mb all'}]
+                choices: [{type:'next', text: 'Mb all'}]
             },
 
             {
@@ -837,10 +837,10 @@ export const story = [
                 engage: false,
                 dialog: {
                     action: '',
-                    speech: "You're finally back. But theres no time to waste. Go help the duke of Whitoria. Whitoria is the kingdom next door so the travel won't take long."
+                    speech: "You're finally back. But theres no time to waste. Go help the duke of Whitoria. Whitoria is the kingdom 'next' door so the travel won't take long."
                 },
                 objective: 'Head to Whitoria',
-                choices: [{type:next, text: 'Fine.'}]
+                choices: [{type:'next', text: 'Fine.'}]
             },
         ]
     }, 
@@ -858,7 +858,7 @@ export const story = [
                     speech: "You're finally here! I've heard good news about you. So what do you say about working for me?"
                 },
                 objective: 'Speak to the duke.',
-                choices: [{type: next, text:"I'll do it"}]
+                choices: [{type: 'next', text:"I'll do it"}]
             },
 
             {
@@ -871,7 +871,7 @@ export const story = [
                     action: '',
                     speech: "That's the spirit! You start once the clock strikes 12pm."
                 },
-                choices: [{type: next, text: "Affirmative."}]
+                choices: [{type: 'next', text: "Affirmative."}]
             },
 
             {
@@ -885,7 +885,7 @@ export const story = [
                     speech: "Clock strikes 12. Midnight Arrives. The duke asks you to protect his family's heirloom overnight. Be careful of "
                 },
                 objective: false,
-                choices: [{type: next, text:'Next'}]
+                choices: [{type: 'next', text:'Next'}]
             },
 
             {
@@ -899,7 +899,7 @@ export const story = [
                     speech: "It's go time."
                 },
                 objective: "Protect the duke's Heirloom",
-                choices: [{type: next, text:'Head to treasury'}]
+                choices: [{type: 'next', text:'Head to treasury'}]
             },
 
             {
@@ -931,7 +931,7 @@ export const story = [
                     speech: ''
                 },
                 objective: 'Report back to the prophet',
-                choices: [{type:next, text: 'Finish your job.'}]
+                choices: [{type:'next', text: 'Finish your job.'}]
             },
 
             {
@@ -946,7 +946,7 @@ export const story = [
                     speech: ''
                 },
                 objective: 'Report back to the prophet',
-                choices: [{type:next, text: 'Run.'}]
+                choices: [{type:'next', text: 'Run.'}]
             },
 
             {
@@ -961,7 +961,7 @@ export const story = [
                     speech: ""
                 },
                 objective: 'Report back to the prophet',
-                choices: [{type:next, text: 'Finish your job.'}]
+                choices: [{type:'next', text: 'Finish your job.'}]
             },
 
             {
@@ -989,7 +989,7 @@ export const story = [
                     action: '',
                     speech: "You're finally here! I've been notified to look out for someone of your description. Can you help me with a task?"
                 },
-                choices: [{type: next, text:"I'll do it"}]
+                choices: [{type: 'next', text:"I'll do it"}]
             },
 
             {
@@ -1002,7 +1002,7 @@ export const story = [
                     action: '',
                     speech: "That's the spirit! You start once the clock strikes 12pm."
                 },
-                choices: [{type: next, text: "Affirmative."}]
+                choices: [{type: 'next', text: "Affirmative."}]
             },
 
             {
@@ -1016,7 +1016,7 @@ export const story = [
                     speech: "Clock strikes 12. Midnight Arrives. The duke asks you to protect his family's heirloom overnight. Be careful of "
                 },
                 objective: false,
-                choices: [{type: next, text:'Next'}]
+                choices: [{type: 'next', text:'Next'}]
             },
 
             {
@@ -1030,7 +1030,7 @@ export const story = [
                     speech: "It's go time."
                 },
                 objective: "Protect the duke's Heirloom",
-                choices: [{type: next, text:'Head to treasury'}]
+                choices: [{type: 'next', text:'Head to treasury'}]
             },
 
             {
@@ -1062,7 +1062,7 @@ export const story = [
                     speech: ''
                 },
                 objective: 'Report back to the prophet',
-                choices: [{type:next, text: 'Finish your job.'}]
+                choices: [{type:'next', text: 'Finish your job.'}]
             },
 
             {
@@ -1077,7 +1077,7 @@ export const story = [
                     speech: ''
                 },
                 objective: 'Report back to the prophet',
-                choices: [{type:next, text: 'Run.'}]
+                choices: [{type:'next', text: 'Run.'}]
             },
 
             {
@@ -1092,7 +1092,7 @@ export const story = [
                     speech: ""
                 },
                 objective: 'Report back to the prophet',
-                choices: [{type:next, text: 'Finish your job.'}]
+                choices: [{type:'next', text: 'Finish your job.'}]
             },
 
             {
@@ -1120,7 +1120,7 @@ export const story = [
                     action: '',
                     speech: "You're finally here! Safe to say I'm not glad you're chosen for this task-especially since all the rumors going about you killing that cat...-but not matter! I need your help with something."
                 },
-                choices: [{type: next, text:"I'll do it"}]
+                choices: [{type: 'next', text:"I'll do it"}]
             },
 
             {
@@ -1133,7 +1133,7 @@ export const story = [
                     action: '',
                     speech: "That's the spirit! You start once the clock strikes 12pm."
                 },
-                choices: [{type: next, text: "Affirmative."}]
+                choices: [{type: 'next', text: "Affirmative."}]
             },
 
             {
@@ -1147,7 +1147,7 @@ export const story = [
                     speech: "Clock strikes 12. Midnight Arrives. The duke asks you to protect his family's heirloom overnight. Be careful of "
                 },
                 objective: false,
-                choices: [{type: next, text:'Next'}]
+                choices: [{type: 'next', text:'Next'}]
             },
 
             {
@@ -1161,7 +1161,7 @@ export const story = [
                     speech: "It's go time."
                 },
                 objective: "Protect the duke's Heirloom",
-                choices: [{type: next, text:'Head to treasury'}]
+                choices: [{type: 'next', text:'Head to treasury'}]
             },
 
             {
@@ -1193,7 +1193,7 @@ export const story = [
                     speech: ''
                 },
                 objective: 'Report back to the prophet',
-                choices: [{type:next, text: 'Finish your job.'}]
+                choices: [{type:'next', text: 'Finish your job.'}]
             },
 
             {
@@ -1208,7 +1208,7 @@ export const story = [
                     speech: ''
                 },
                 objective: 'Report back to the prophet',
-                choices: [{type:next, text: 'Run.'}]
+                choices: [{type:'next', text: 'Run.'}]
             },
 
             {
@@ -1223,7 +1223,7 @@ export const story = [
                     speech: ""
                 },
                 objective: 'Report back to the prophet',
-                choices: [{type:next, text: 'Finish your job.'}]
+                choices: [{type:'next', text: 'Finish your job.'}]
             },
 
             {
@@ -1237,7 +1237,7 @@ export const story = [
                     speech: "Spare me the small talk of last night, because you're being sent another mission! Go fight Icarus or Astro."
                 },
                 objective: 'Fight your boss of choosing.',
-                choices: [{type: next, text: "Next"}]
+                choices: [{type: 'next', text: "'Next'"}]
             },
 
             {
@@ -1251,8 +1251,8 @@ export const story = [
                     speech: "EMBODIMENT OF EGOTISM ICARUS + KARMA, ASTRO - KARMA"
                 },
                 objective: 'Fight your boss of choosing.',
-                choices: [{type: next, text: 'Icarus'},
-                    {type: next, text: 'Astro'}
+                choices: [{type: 'next', text: 'Icarus'},
+                    {type: 'next', text: 'Astro'}
                 ]
             }
         ],
@@ -1271,7 +1271,7 @@ export const story = [
                     speech: "So you have chosen Astro? Exit through the north path of town."
                 },
                 objective: 'Fight Astro',
-                choices: [{type: next, text: 'Next'}]
+                choices: [{type: 'next', text: 'Next'}]
             },
 
             {
@@ -1285,7 +1285,7 @@ export const story = [
                     speech: "",
                 },
                 objective: 'Fight Astro',
-                choices: [{type: next, text: 'Next'}]
+                choices: [{type: 'next', text: 'Next'}]
             },
 
             {
@@ -1299,7 +1299,7 @@ export const story = [
                     speech: "WHO DARES APPROACH ME, ASTRO OF THE SKY"
                 },
                 objective: 'Fight Astro',
-                choices: [{type: next, text:'I am.'}]
+                choices: [{type: 'next', text:'I am.'}]
             },
 
             { 
@@ -1313,7 +1313,7 @@ export const story = [
                     speech: "and who might YOU be! You are a nobody for all I care!"
                 },
                 objective: 'Fight Astro',
-                choices: [{type: next, text: "Lets let our weapons do the talking."}]
+                choices: [{type: 'next', text: "Lets let our weapons do the talking."}]
             },
 
             {
@@ -1327,7 +1327,7 @@ export const story = [
                     speech: "You fool, the dragon will have your head..."
                 },
                 objective: 'Report back to the Prophet',
-                choices: [{type: next, text: 'Heh'}]
+                choices: [{type: 'next', text: 'Heh'}]
             },
 
             {
@@ -1341,7 +1341,7 @@ export const story = [
                     speech: "You were all bark and no bite. Heh, you were easy."
                 },
                 objective: 'Report back to the Prophet',
-                choices: [{type: next, text: 'Next', karma: karmaCounter += 10}]
+                choices: [{type: 'next', text: 'Next', karma: karmaCounter += 10}]
             },
 
             {
@@ -1355,7 +1355,7 @@ export const story = [
                     speech: "You are finally back! You know what I'm gonna tell you huh. Yup ANOTHER QUEST! Go over to that village chief over there, he needs help."
                 },
                 objective: "Help the Village Chief",
-                choices: [{type: next, text:'Fine'}]
+                choices: [{type: 'next', text:'Fine'}]
             }
         ],
 
@@ -1371,7 +1371,7 @@ export const story = [
                     speech: "So you have chosen Icarus? Exit through the south path of town."
                 },
                 objective: 'Fight Icarus',
-                choices: [{type: next, text: 'Next'}]
+                choices: [{type: 'next', text: 'Next'}]
             },
 
             {
@@ -1385,7 +1385,7 @@ export const story = [
                     speech: ''
                 },
                 objective: 'Fight Icarus',
-                choices: [{type: next, text: 'Next'}]
+                choices: [{type: 'next', text: 'Next'}]
             },
 
             {
@@ -1399,7 +1399,7 @@ export const story = [
                     speech: "Who dares to walk in the presence of the most revered Icarus!"
                 },
                 objective: 'Fight Icarus',
-                choices: [{type: next, text: 'I am.'}]
+                choices: [{type: 'next', text: 'I am.'}]
             },
 
             {
@@ -1413,7 +1413,7 @@ export const story = [
                     speech: "You are really funny! But are you as strong?"
                 },
                 objective: 'Fight Astro',
-                choices: [{type: next, text: 'Come find out.'}]
+                choices: [{type: 'next', text: 'Come find out.'}]
             },
 
             {
@@ -1427,7 +1427,7 @@ export const story = [
                     speech: "Damn you. Don't you realize what you're doing?"
                 },
                 objective: 'Report back to the Prophet',
-                choices: [{type: next, text: 'Heh'}]
+                choices: [{type: 'next', text: 'Heh'}]
             },
 
             {
@@ -1441,7 +1441,7 @@ export const story = [
                     speech: "You were all bark and no bite. Heh, you were easy."
                 },
                 objective: 'Report back to the Prophet',
-                choices: [{type: next, text: 'Next', karma: karmaCounter -= 10}]
+                choices: [{type: 'next', text: 'Next', karma: karmaCounter -= 10}]
             },
 
             {
@@ -1455,7 +1455,7 @@ export const story = [
                     speech: "You are finally back! You know what I'm gonna tell you huh. Yup ANOTHER QUEST! Go over to that village chief over there, he needs help."
                 },
                 objective: "Help the Village Chief",
-                choices: [{type: next, text:'Fine'}]
+                choices: [{type: 'next', text:'Fine'}]
             }
         ]
     },
@@ -1473,7 +1473,7 @@ export const story = [
                     speech: "Thank God you are here warrior! I need you to save my daughter!"
                 },
                 objective: 'Help the Village Chief',
-                choices: [{type: next, text: "I'm on it."}]
+                choices: [{type: 'next', text: "I'm on it."}]
             }, 
 
             {
@@ -1503,7 +1503,7 @@ export const story = [
                     speech: "Thank God you are here warrior! I need you to save my daughter!"
                 },
                 objective: 'Help the Village Chief',
-                choices: [{type: next, text: "I'm on it."}]
+                choices: [{type: 'next', text: "I'm on it."}]
             }
         ],
 
@@ -1519,7 +1519,7 @@ export const story = [
                     speech: "Thank God you are here warrior! I need you to save my daughter!"
                 },
                 objective: 'Help the Village Chief',
-                choices: [{type: next, text: "I'm on it."}]
+                choices: [{type: 'next', text: "I'm on it."}]
             }
         ]
     }

@@ -10,13 +10,11 @@ const posChoice = document.getElementById('poschoice');
 const negChoice = document.getElementById('negchoice');
 
 
-import { story } from 'story.js';
-import { status } from './logic';
-import Typewriter from "https://cdn.jsdelivr.net/npm/typewriter-effect@2.22.0/dist/core.min.js";
-const typewriter = new Typewriter(app, {
-  loop: true,
-  delay: 75,
-});
+import { story } from './story.js';
+import { status } from './logic.js';
+
+
+posChoice.addEventListener('click', )
 
 function setBG(place) { //gives class to body based on the place you're in to style later
   switch (place) {
@@ -113,19 +111,20 @@ function speakerDialog(text) {
   dialogBox.textContent = text;
 }
 
-function choices(options, pN, neg, neu) { 
+function choices(options) { 
   //if choices are equal to 1 then give pos choice and neg choice an invisible class
- if(options.length === 1){
-  posChoice.className = 'hide';
-  negChoice.className = 'hide';
-  neuChoice.className = 'next';
-  neuChoice.textContent = pN;
- } 
- if (options.length > 1){
-  posChoice.textContent = pN;
-  negChoice.textContent = neg;
-  neuChoice.textContent = neu;
+  if (options[0].type === 'next'){
+    neuChoice.textContent = options[0].text;
+    neuChoice.className = 'nextButton'
+    posChoice.className = 'hidden';
+    negChoice.className = 'hidden';
+  }
+ if (options[0].type !== 'next'){
+  posChoice.textContent = options[0].text;
+  negChoice.textContent = options[1].text;
+  neuChoice.textContent = options[2].text;
  }
+
 
 }
 
@@ -141,17 +140,26 @@ function pageUpdate() { //grabs what part of the story ur on and distributes
   let dialog = scene.dialog.speech;
   let action = scene.dialog.action;
   let options = scene.choices;
-  let posAndNextText = scene.choices[0].text;
-  let negText = scene.choices[1].text;
-  let neuText = scene.choices[2].text; //because choices is an array i have to split the choice text up since just one choice will give me all 3 sadly
-  let obj = scene.objective;
+  console.log(options[0].type);
+  
+  
 
   setBG(place);
   setPerson(speaker);
   speakerDialog(dialog);
   speakerAction(action);
-  choices(options, posAndNextText, negText, neuText);
-  objective(obj)
+  choices(options);
+  objective(obj);
 }
 
 export { pageUpdate };
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  pageUpdate();
+});
+
+
+
+

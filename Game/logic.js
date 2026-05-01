@@ -82,3 +82,5 @@ class enemy{
         this.dmg = dmg;
     }
 }
+
+
