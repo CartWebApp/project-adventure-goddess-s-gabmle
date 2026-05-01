@@ -9,12 +9,47 @@ const neuChoice = document.getElementById('neuchoice');
 const posChoice = document.getElementById('poschoice');
 const negChoice = document.getElementById('negchoice');
 
-
 import { story } from './story.js';
-import { status } from './logic.js';
+import {  status, progression, saveStatus, loadStatus } from './logic.js';
+const typewriter = new window.Typewriter(dialogBox, {
+  loop: false,
+  delay: 7,
+});
 
+function getOptions() {
+  let chapter = story[status.Progression.chapterIndex];
+  let scene = chapter.scenes[status.Progression.sceneIndex];
+  return scene.choices;
+}
 
-posChoice.addEventListener('click', )
+function handleChoice(index) {
+  let options = getOptions();
+  let picked = options[index] || options[0];
+
+  if (picked.type === 'positive') {
+    status.Karma += 5;
+  }
+  if (picked.type === 'negative') {
+    status.Karma -= 5;
+  }
+
+  progression(picked);
+  pageUpdate();
+}
+
+neuChoice.addEventListener('click', function(){
+  let options = getOptions();
+  let index = options[0] && options[0].type === 'next' ? 0 : 2;
+  handleChoice(index);
+});
+
+posChoice.addEventListener('click', function(){
+  handleChoice(0);
+});
+
+negChoice.addEventListener('click', function(){
+  handleChoice(1);
+});
 
 function setBG(place) { //gives class to body based on the place you're in to style later
   switch (place) {
@@ -36,7 +71,7 @@ function setBG(place) { //gives class to body based on the place you're in to st
     case 'whitoria':
       bg.className = place;
       break;
-    case 'whitoria':
+    case 'whitoriaNight':
       bg.className = place;
       break;
     case 'treasury':
@@ -69,7 +104,7 @@ function setPerson(speaker) { //long switch statement that reads speaker and set
       speakerTitle.textContent = speaker
       break;
     case 'Royal Guard':
-      speakerPic.className = speaker
+      speakerPic.className = 'royalGuard'
       speakerTitle.textContent = speaker
       break;
     case 'Yapper':
@@ -81,7 +116,7 @@ function setPerson(speaker) { //long switch statement that reads speaker and set
       speakerTitle.textContent = speaker
       break;
     case 'Mean Granny':
-      speakerPic.className = speaker
+      speakerPic.className = 'granny'
       speakerTitle.textContent = speaker
       break;
     case 'Cat':
@@ -108,27 +143,40 @@ function setPerson(speaker) { //long switch statement that reads speaker and set
 }
 
 function speakerDialog(text) {
-  dialogBox.textContent = text;
+  typewriter.stop();
+  typewriter
+    .deleteAll(text)                 // reset internal state
+    .typeString(text)
+    .start();
+    console.log(text)
+
+  
 }
 
 function choices(options) { 
   //if choices are equal to 1 then give pos choice and neg choice an invisible class
-  if (options[0].type === 'next'){
-    neuChoice.textContent = options[0].text;
-    neuChoice.className = 'nextButton'
-    posChoice.className = 'hidden';
-    negChoice.className = 'hidden';
+  if (options[0].type ==='next'){
+    neuChoice.textContent = options[0].text;;
+    neuChoice.className = 'next';
+    posChoice.className = 'hide';
+    negChoice.className = 'hide';
   }
- if (options[0].type !== 'next'){
-  posChoice.textContent = options[0].text;
-  negChoice.textContent = options[1].text;
-  neuChoice.textContent = options[2].text;
- }
 
-
+  if (options[0].type !== 'next'){
+    posChoice.textContent = options[0].text;
+    negChoice.textContent = options[1].text;
+    neuChoice.textContent = options[2].text;
+    neuChoice.className = '';
+    posChoice.className = '';
+    negChoice.className = '';
+  }
 }
 
 function speakerAction(action) {
+
+}
+
+function objective(obj){
 
 }
 
@@ -140,26 +188,18 @@ function pageUpdate() { //grabs what part of the story ur on and distributes
   let dialog = scene.dialog.speech;
   let action = scene.dialog.action;
   let options = scene.choices;
-  console.log(options[0].type);
-  
-  
+  let obj = scene.objective;
 
   setBG(place);
   setPerson(speaker);
   speakerDialog(dialog);
   speakerAction(action);
   choices(options);
-  objective(obj);
+  objective(obj)
 }
 
 export { pageUpdate };
 
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  pageUpdate();
+document.addEventListener("DOMContentLoaded", (event) => {
+    pageUpdate();
 });
-
-
-
-

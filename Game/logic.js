@@ -1,12 +1,14 @@
 import { story } from './story.js';
-import { pageUpdate } from './ui.js';
+
 
 // localstorage key
 const storageKey = 'gork';
 
 // status object where ui can see and read from it
 const status = {
-    Health: 100,
+    health: '100',
+    attack: '10',
+    chance: '50',
     Inventory: {},
     Progression: { chapterIndex: 0, sceneIndex: 0 },
     Karma: 0,
@@ -14,12 +16,12 @@ const status = {
 };
 
 // save status to localstorage
-function saveStatus() {
+ function saveStatus() {
     localStorage.setItem(storageKey, JSON.stringify(status));
 }
 
 // load status from localstorage and merge with status 
-function loadStatus() {
+ function loadStatus() {
     let statusStr = localStorage.getItem(storageKey);
     if (statusStr) {
         let statusData = JSON.parse(statusStr);
@@ -32,24 +34,33 @@ function loadStatus() {
 }
 
 // progression function 
-function progression() {
-    pageUpdate();
+function progression(selectedChoice) {
     let prog = status.Progression;
     let chapter = story[prog.chapterIndex];
 
-    // advance one scene (single-choice scenes = next)
-    prog.sceneIndex = prog.sceneIndex + 1;
-
-    // if we're on the last scene go to next chapter
-    if (prog.sceneIndex >= chapter.scenes.length) {
-        prog.chapterIndex = prog.chapterIndex + 1;
+    // branch jump when theres a goTo 
+    if (selectedChoice && typeof selectedChoice.goTo === 'number' && story[selectedChoice.goTo]) {
+        prog.chapterIndex = selectedChoice.goTo;
         prog.sceneIndex = 0;
-        if (prog.chapterIndex >= story.length) { // if we passed the final chapter, go to last scene b4 it ended
-            prog.chapterIndex = story.length - 1;
-            let last = story[prog.chapterIndex];
-            prog.sceneIndex = (last.scenes || []).length - 1;
+    } else {
+        // advance one scene (single-choice scenes = next)
+        prog.sceneIndex = prog.sceneIndex + 1;
+
+        // if we're on the last scene go to next chapter
+        if (prog.sceneIndex >= chapter.scenes.length) {
+            prog.chapterIndex = prog.chapterIndex + 1;
+            prog.sceneIndex = 0;
+            if (prog.chapterIndex >= story.length) { // if we passed the final chapter, go to last scene b4 it ended
+                prog.chapterIndex = story.length - 1;
+                let last = story[prog.chapterIndex];
+                prog.sceneIndex = (last.scenes || []).length - 1;
+            }
         }
     }
+
+    //saves the selected choice as the last choice
+    status.LastChoice = selectedChoice.type;
+
 
     // save progression to local storage 
     saveStatus();
@@ -66,21 +77,20 @@ export { status, progression, saveStatus, loadStatus };
 
 
 // classes
-class item{
-    constructor(name, img, effect){
+class item {
+    constructor(name, img, effect) {
         this.name = name;
         this.img = img;
         this.effect = effect;
     }
 }
 
-class enemy{
-    constructor(name, img, health, dmg){
+class enemy {
+    constructor(name, img, health, dmg) {
         this.name = name;
-        this.img = img; 
+        this.img = img;
         this.health = health;
         this.dmg = dmg;
     }
 }
-
 
