@@ -176,7 +176,7 @@ function choices(options) {
 }
 
 function speakerAction(action) {
-
+  dialogAction.textContent = action
 }
 
 function objective(obj) {
