@@ -147,7 +147,7 @@ function setPerson(speaker) { //long switch statement that reads speaker and set
 function speakerDialog(text) {
 
   typewriter
-    .changeDeleteSpeed(0)
+    .changeDeleteSpeed(-1)
     .deleteAll(0)
     .typeString(text)
     .start();
